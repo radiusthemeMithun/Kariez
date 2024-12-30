@@ -1,0 +1,98 @@
+/* Back to top
+======================*/
+
+//.scrollToTop {
+//	width: 0;
+//	height: 0;
+//	border-radius: 50%;
+//	background-color: $primary_color;
+//	color: $button_color;
+//	box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
+//	display: inline-flex;
+//	justify-content: center;
+//	align-items: center;
+//	position: fixed;
+//	right: 0;
+//	bottom: 0;
+//	z-index: 999;
+//	opacity: 0;
+//	visibility: hidden;
+//
+//	&.show {
+//		opacity: 1;
+//		visibility: visible;
+//		right: 30px;
+//		bottom: 30px;
+//		width: 40px;
+//		height: 40px;
+//	}
+//
+//	svg {
+//		fill: $button_color;
+//	}
+//
+//	&:hover {
+//		background: $tertiary_color;
+//		color: $button_text_color;
+//		i {
+//			animation: toBottomFromTop 0.7s forwards;
+//		}
+//		svg {
+//			fill: $button_text_color;
+//		}
+//	}
+//}
+
+.kariez-bc-totop {
+	position: fixed;
+	z-index: 15;
+	bottom: 46px;
+	right: 40px;
+	text-decoration: none;
+	width: 50px;
+	height: 50px;
+	border: 1px solid $title_color;
+	background-color: $white_color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transform: translateY(120px);
+	overflow: hidden;
+	.progress-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		display: block;
+	}
+	.progress {
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		right: 3px;
+		bottom: 3px;
+		width: calc(100% - 6px);
+		height: 0;
+		background-color: $primary_color;
+		border-radius: 0;
+	}
+	.bc-svg {
+		color: $title_color;
+		font-size: 8px;
+
+		&:before {
+			width: auto;
+			margin: 0;
+		}
+	}
+	&.active {
+		transform: translateY(0);
+		.bc-svg {
+			transform: rotate(0deg) translateX(0px);
+			transition: all .3s ease;
+		}
+	}
+}

@@ -1,0 +1,209 @@
+.single-post {
+	.single-post-thumbnail {
+		margin-bottom: 30px;
+		img {
+			width: 100%;
+		}
+	}
+	.kariez-post-card {
+		.entry-header {
+			.entry-title {
+				font-size: clamp(40px, 4vw, 50px);
+				line-height: 1.2;
+				margin-bottom: 24px;
+			}
+		}
+		.rt-post-meta {
+			margin-bottom: 24px;
+		}
+	}
+	.entry-footer {
+		display: flex;
+		padding-bottom: 50px;
+		@media (max-width: 767px) {
+			flex-direction: column;
+			align-items: baseline !important;
+			gap: 20px;
+		}
+		.post-tags {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			span {
+				color: $title_color;
+				font-weight: 500;
+			}
+		}
+		.tag-links {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 7px;
+			.sp {
+				display: none;
+			}
+			a {
+
+				color: $body_color;
+				font-size: 15px;
+				position: relative;
+				line-height: 1.4;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+		.post-share {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+		.social-share-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			flex-wrap: wrap;
+			li {
+				margin-bottom: 0;
+			}
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				color: $body_color;
+				i {
+					display: block;
+					font-size: 16px;
+				}
+				&:hover {
+					i {
+						animation: headShake 1.5s;
+					}
+				}
+			}
+		}
+	}
+}
+.author .profile-author {
+	margin-bottom: 60px;
+	margin-top: 0;
+	@media(min-width: 1199px) {
+		padding: 60px;
+	}
+}
+.profile-author {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+	border-bottom: 1px solid $border_color;
+	.profile-thumb {
+		@media(min-width: 1200px) {
+			height: 239px;
+			width: 205px;
+		}
+		img {
+			@media(min-width: 1200px) {
+				height: 239px;
+				width: 205px;
+				object-fit: cover;
+			}
+		}
+	}
+	.profile-content {
+		flex: 1;
+		background-color: $primary_color;
+		padding: 25px 80px 30px 30px;
+		@media(max-width: 575px) {
+			flex: auto;
+		}
+	}
+	.profile-title {
+		margin-bottom: 2px;
+		text-transform: capitalize;
+		font-size: 30px;
+		a {
+			color: $title_color;
+			&:hover {
+				color: $white_color;
+			}
+		}
+	}
+	.profile-info {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 12px;
+		text-transform: capitalize;
+		color: $title_color;
+	}
+	.author-bio {
+		margin-bottom: 18px;
+		color: $title_color;
+		font-size: 18px;
+	}
+	.profile-author-social {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		gap: 7px;
+		flex-wrap: wrap;
+		a {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			color: $title_color;
+			&:hover {
+				color: $white_color;
+			}
+		}
+	}
+}
+
+
+.wp-block-quote {
+	background-color: transparent;
+	border: 5px solid #000000;
+	color: $title_color;
+	margin: 30px 0;
+	padding: 45px 40px 45px 160px;
+	position: relative;
+	&:after {
+		content: "\e852";
+		font-family: rt-fontello;
+		font-size: 50px;
+		position: absolute;
+		color: $title_color;
+		left: 70px;
+		top: 70px;
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: 36px;
+		line-height: 1.2;
+		font-weight: 500;
+		font-style: italic;
+	}
+}
+
+//.kariez-single-1:not(.layout-left-sidebar) {
+//	.single-content {
+//		.entry-wrapper,
+//		.single-post-pagination,
+//		.comments-area {
+//			@media (min-width: 1140px) {
+//				padding-left: 80px;
+//				padding-right: 80px;
+//			}
+//		}
+//	}
+//}

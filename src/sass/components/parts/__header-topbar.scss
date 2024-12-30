@@ -1,0 +1,138 @@
+/* Topbar Navigation
+***************************/
+.kariez-topbar {
+	font-size: 14px;
+	border-bottom: 1px solid $title_color;
+	//background-color: rgba(13, 11, 18, .4);
+	//color: $white_color;
+	padding: 20px 60px;
+
+	@media(max-width: 650px) {
+		.topbar-right {
+			padding: 5px 0;
+		}
+	}
+	.topbar-row {
+		justify-content: space-between;
+		@media(max-width: 991px) {
+			justify-content: center;
+		}
+	}
+
+	.topbar-left {
+		span {
+			position: relative;
+			display: flex;
+			align-items: center;
+			column-gap: 3px;
+			i {
+				color: $title_color;
+			}
+			.text {
+				color: $title_color;
+			}
+			a {
+				font-weight: bold;
+				color: $title_color;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+
+		@media(max-width: 767px) {
+			justify-content: center;
+		}
+	}
+
+	.social-icon {
+		display: inline-flex;
+		align-items: center;
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: inherit;
+			width: 35px;
+			height: 35px;
+			border: 1px solid $title_color;
+			border-radius: 100%;
+			position: relative;
+			z-index: 1;
+			&:hover {
+				border-color: $title_color;
+				&::after {
+					transform: scale(.9);
+				}
+				svg {
+					fill: $title_color;
+				}
+			}
+			&::after {
+				content: "";
+				transform: scale(0);
+				background-color: $primary_color;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				transition: .5s;
+				border-radius: 100%;
+			}
+			&:not(:last-child) {
+				margin-right: 12px;
+			}
+		}
+
+		[class*=icon] svg {
+			width: 14px;
+			height: 14px;
+			fill: $title_color;
+		}
+	}
+}
+
+.has-trheader .site-header .kariez-topbar  {
+	border-bottom: 1px solid rgba(255, 255, 255, .15);
+	.topbar-left {
+		span {
+			color: $white_color;
+			i {
+				color: $white_color;
+			}
+			.text {
+				color: $white_color;
+			}
+			a {
+				color: $white_color;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+	}
+	.social-icon {
+
+		a {
+
+			border: 1px solid rgba(255, 255, 255, .5);
+
+			&:hover {
+				&::after {
+					transform: scale(.9);
+				}
+				svg {
+					fill: $title_color;
+				}
+			}
+		}
+
+		[class*=icon] svg {
+
+			fill: rgba(255, 255, 255, .5);
+		}
+	}
+}

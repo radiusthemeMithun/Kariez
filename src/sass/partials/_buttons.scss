@@ -1,0 +1,244 @@
+button {
+	@include transition_default();
+	cursor: pointer;
+}
+
+.btn {
+	color: $title_color;
+	background-color: $primary_color;
+	text-align: center;
+	display: inline-block;
+	padding: 16px 30px 15px;
+	transition: all .3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 0;
+	font-size: 16px;
+	@include transition_default();
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.btn-xl {
+		$xl_size: $base_fs + 8;
+		padding: ($base_fs+8) ($base_fs + 16);
+		@include font_size($xl_size, $xl_size);
+	}
+
+	&.btn-lg {
+		$lg_size: $base_fs + 2;
+		padding: ($base_fs + 2) ($base_fs + 8);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-sm {
+		$lg_size: $base_fs - 3;
+		padding: ($base_fs - 4) ($base_fs + 4);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-xs {
+		$lg_size: $base_fs - 6;
+		padding: ($base_fs - 5) ($base_fs + 2);
+		@include font_size($lg_size, $lg_size);
+	}
+
+}
+
+//Button style
+.btn-primary {
+	@include button_style($white_color, $primary_color, $secondary_color);
+}
+
+.btn-secondary {
+	@include button_style($white_color, $secondary_color, rgba($secondary_rgb, 0.8));
+}
+
+.btn-light {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+
+.btn-gray {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+.rt-button .btn {
+	column-gap: 10px;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: $white_color;
+		transform: scalex(0.0);
+		transform-origin: center;
+		transform-style: preserve-3d;
+		transition: all 0.3s linear;
+		transform-origin: left center;
+		z-index: -1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: $title_color;
+		transform: scaleY(0.0);
+		transform-origin: center;
+		transform-style: preserve-3d;
+		transition: all 0.3s linear;
+		transform-origin: right center;
+		z-index: -1;
+	}
+	i {
+		font-size: 18px;
+		display: inline-block;
+		transition: all 0.3s ease-in-out 0s;
+		margin-left: 5px;
+	}
+	&:hover {
+		color: $primary_color;
+		&::before {
+			transform: scalex(1.0);
+			transform-origin: left center;
+			transition-delay: 100ms;
+		}
+		&::after {
+			transform: scaleY(1.0);
+			transform-origin: right center;
+			transition-delay: 100ms;
+		}
+	}
+}
+// button 1
+.button-1 {
+	color: $title_color;
+	i {
+		color: $title_color;
+	}
+	&:hover {
+		color: $primary_color;
+		i {
+			color: $primary_color;
+		}
+	}
+
+}
+// button 2
+.rt-button .button-2 {
+	color: $button_text_color;
+	padding: 8px 18px 6px;
+	height: 50px;
+	line-height: 36px;
+	i {
+		color: $button_text_color;
+	}
+	&:hover {
+		i {
+			color: $primary_color;
+		}
+	}
+}
+// button 3
+.rt-button .button-3 {
+	padding: 10px 24px;
+	border-radius: 0;
+}
+
+// button 4
+.rt-button .button-4 {
+	padding: 10px 24px;
+	border-radius: 0;
+	background-color: $title_color;
+	color: $white_color;
+	&:hover {
+		i {
+			color: $primary_color;
+		}
+	}
+	&:before {
+		background-color: $primary_color;
+	}
+	&:after {
+		background-color: $white_color;
+	}
+	i {
+		transition: all 0.3s ease-in-out 0s;
+		font-size: 13px;
+	}
+}
+// button 5
+.rt-button .button-5 {
+
+	border-radius: 0;
+	background-color: $white_color;
+	color: $title_color;
+	i {
+		position: relative;
+		top: -1px;
+		font-weight: 900;
+	}
+	&:hover {
+		color: $primary_color;
+		i {
+			color: $primary_color;
+		}
+	}
+	&:before {
+		background-color: $primary_color;
+	}
+	&:after {
+		background-color: $title_color;
+	}
+}
+
+.rt-button .button-6 {
+
+	border-radius: 0;
+	background-color: transparent;
+	color: $title_color;
+	padding: 0;
+	position: relative;
+	i {
+		position: relative;
+		top: -1px;
+		font-weight: 900;
+	}
+	&:hover {
+		color: $title_color;
+		&:after {
+			width: 100%;
+		}
+		i {
+			color: $primary_color;
+		}
+	}
+	&:before {
+		display: none;
+	}
+	&:after {
+		content: "";
+		height: 1px;
+		width: 0%;
+		background-color: $title_color;
+		position: absolute;
+		bottom: 8px;
+		display: inline-block;
+		left: 0;
+		top: auto;
+		right: auto;
+		transition: width .4s ease;
+	}
+}

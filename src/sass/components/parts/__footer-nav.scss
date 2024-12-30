@@ -1,0 +1,26 @@
+/* Footer Menu Wrapper
+***************************/
+
+.site-footer {
+	.footer-menu-wrapper {
+		border-top: 1px solid $gray20;
+
+		.kariez-footer-1 & {
+			.align-default {
+				justify-content: center;
+			}
+		}
+	}
+
+	.kariez-navigation ul > li > ul.depth_0 {
+		bottom: 100%;
+		top: auto;
+	}
+
+	.kariez-navigation ul li ul li ul {
+		left: 100%;
+		top: auto;
+		bottom: 0;
+	}
+
+}

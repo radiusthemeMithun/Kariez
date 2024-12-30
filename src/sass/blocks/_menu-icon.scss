@@ -1,0 +1,74 @@
+// Menu Icon
+
+.rt-phone-1 {
+	display: flex;
+	align-items: center;
+	line-height: 1.4;
+	.phone-icon {
+		padding-right: 8px;
+	}
+	.phone-label {
+		padding-right: 8px;
+	}
+	.content {
+		display: flex;
+		align-items: center;
+	}
+}
+.rt-phone-2 {
+	display: flex;
+	align-items: center;
+	line-height: 1.4;
+	.phone-icon {
+		color: $button_color;
+		padding-right: 8px;
+		i {
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			background-color: $primary_color;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.phone-label {
+		color: #6a6a6a;
+		font-size: 13px;
+		font-weight: 600;
+		padding-right: 8px;
+	}
+}
+
+.branding-wrap {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	//@media (max-width: 767px) {
+	//	justify-content: center;
+	//}
+	@media (min-width: 1200px) {
+		gap: 60px;
+	}
+	ul {
+		position: relative;
+		z-index: 1;
+		&:after {
+			content: "";
+			height: 92px;
+			width: 1px;
+			background-color: #d9d9d9;
+			position: absolute;
+			top: -32px;
+			right: -30px;
+			display: none;
+			@media (min-width: 1200px) {
+				display: block;
+			}
+		}
+		.ham-burger {
+			list-style: none;
+		}
+	}
+
+}

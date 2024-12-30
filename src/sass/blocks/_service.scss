@@ -1,0 +1,159 @@
+.rt-service-slider {
+	.rt-swiper-slider {
+		.swiper-navigation {
+			display: inline-flex;
+			justify-content: center;
+			width: 100%;
+			gap: 0;
+			position: relative;
+			@media(min-width: 1200px) {
+				top: -50px;
+				left: -12px;
+			}
+			@include transition_default();
+			.swiper-button {
+				height: 80px;
+				width: 80px;
+				background-color: $title_color;
+				border: 0;
+				border-radius: 0;
+				position: relative;
+				transform: translateY(0);
+				&:before {
+					display: none;
+				}
+				&:hover {
+					background-color: $title_color;
+					i {
+						color: $primary_color;
+					}
+				}
+
+				i {
+					font-size: 22px;
+					-webkit-text-stroke: 1px $primary_color;
+					color: transparent;
+					@include transition_default();
+					&:before {
+						width: auto;
+						margin: 0;
+					}
+				}
+				&.active {
+					background-color: $primary_color;
+					i {
+						-webkit-text-stroke: 1px $title_color;
+						color: transparent;
+					}
+				}
+			}
+			.swiper-button-prev {
+				left: 0;
+				opacity: 1;
+				visibility: visible;
+			}
+			.swiper-button-next {
+				right: 0;
+				opacity: 1;
+				visibility: visible;
+
+			}
+		}
+		.swiper-pagination {
+			margin-top: 0;
+			.swiper-pagination-bullet {
+				background: $title_color;
+			}
+			.swiper-pagination-bullet-active {
+				background: $primary_color;
+			}
+		}
+	}
+	.swiper-slide-active {
+		.slider-item {
+			.service-slider-content {
+				.service-slider-img {
+					img {
+						animation: slideInRight 1.5s;
+					}
+					.rt-icon {
+						animation: slideInUp 1.5s;
+					}
+				}
+			}
+		}
+	}
+	.slider-item {
+		@media(min-width: 1200px) {
+			margin: 40px 0 40px 0;
+		}
+		.service-slider-content {
+			@media(min-width: 1200px) {
+				display: flex;
+			}
+			.service-slider-img {
+				position: relative;
+				overflow: hidden;
+				.rt-icon {
+					height: 120px;
+					width: 120px;
+					background-color: $primary_color;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					top: 50px;
+					right: 50px;
+					i {
+						font-size: 80px;
+						color: $title_color;
+					}
+					.icon-truck-1 {
+						font-size: 60px;
+						&:before {
+							width: auto;
+							margin: 0;
+						}
+					}
+				}
+			}
+			.rt-content {
+				background-color: $white_color;
+				box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+				padding: 40px;
+				height: 100%;
+				flex: 1;
+				@media(min-width: 768px) {
+					padding: 105px 60px 95px 75px;
+				}
+				p {
+					margin-bottom: 20px;
+					color: $title_color;
+				}
+			}
+		}
+	}
+}
+
+.stroke-title {
+	display: inline-block;
+	position: relative;
+	color: transparent;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 1.2;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-text-stroke: 1px $title_color;
+	transition: all 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87);
+	font-family: $heading-font;
+	margin-bottom: 20px;
+	@media(min-width: 480px) {
+		font-size: 100px;
+	}
+	&:hover {
+		transition: all 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87);
+		color: $primary_color;
+	}
+}
+

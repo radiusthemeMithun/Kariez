@@ -1,0 +1,225 @@
+.rt-post-meta {
+	color: #7A7A7A;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 2px;
+		column-gap: 15px;
+	}
+	ul li {
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1.5;
+		//&:before {
+		//	content: "";
+		//	height: 1px;
+		//	width: 10px;
+		//	background-color: #7a7a7a;
+		//	position: absolute;
+		//	right: -50px;
+		//	top: 50%;
+		//	transform: translateY(-50%);
+		//	display: none;
+		//}
+		.bypostauthor {
+			margin-right: 4px;
+		}
+		&.edit-link {
+			opacity: 0;
+			visibility: hidden;
+		}
+		i {
+			padding-right: 6px;
+		}
+	}
+
+	article:hover & ul li.edit-link {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	ul li a {
+		color: $primary_color;
+		padding-bottom: 0;
+
+		&:hover {
+			color: $title_color;
+		}
+	}
+
+	//Default meta style
+	.meta-style-default & {
+
+		ul {
+			column-gap: 10px;
+			display: block;
+		}
+		ul li {
+			display: inline;
+		}
+
+		ul li:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+
+	.meta-style-border & {
+		ul {
+			gap: 5px;
+		}
+
+		ul li:not(.category, .tag) {
+			color: $title_color;
+			border: 1px solid $border_color;
+			min-height: 32px;
+			padding: 0 12px;
+			@extend .primaryColor;
+
+			a {
+				@extend .primaryColor;
+
+				&:hover {
+					color: $title_color;
+				}
+			}
+		}
+
+		ul li:is(.category, .tag) {
+			padding: 0;
+
+			.tag-links,
+			.category-links {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 5px;
+			}
+
+			.sp {
+				display: none;
+			}
+
+			a {
+				color: $title_color;
+				border: 1px solid $border_color;
+				font-size: 14px;
+				font-weight: 500;
+				padding: 4px 12px;
+				@extend .primaryColor;
+
+				&:hover {
+					@extend .primaryBG;
+					@extend .whiteColor;
+				}
+			}
+		}
+	}
+
+	.meta-style-pipe & {
+		li:not(:last-child)::after {
+			content: " | ";
+			transform: scaleY(.9);
+			margin: 0 1px 0 10px;
+		}
+	}
+
+	//Dashed meta style
+	.meta-style-dash & li::before {
+		@extend .metaStyleDash;
+	}
+
+	//After Dash meta style
+	.meta-style-dash2 & {
+		li:not(:last-child)::after {
+			content: " - ";
+			transform: translateX(5px);
+	}
+}
+
+
+	//Dash and BG Style
+	.meta-style-dash-bg & {
+		ul {
+			gap: 6px;
+		}
+
+		li {
+			padding: 0;
+		}
+
+		li::before {
+			@extend .metaStyleDash;
+		}
+
+		.tag-links,
+		.category-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+		}
+
+		li:not(.category, .tag) {
+			background: $gray20;
+			border-radius: 6px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			padding: 4px 12px;
+			margin: 0;
+			@include transition_default();
+			@extend .primaryColor;
+
+			&:before {
+				@extend .primaryColor;
+			}
+
+			a {
+				@extend .primaryColor;
+			}
+
+			a:hover {
+				color: $title_color;
+			}
+		}
+
+		li:is(.category, .tag) {
+			.sp {
+				display: none;
+			}
+
+			a {
+				display: inline-block;
+				height: 100%;
+				padding: 7px 12px;
+				line-height: 1;
+				position: relative;
+				background-color: $gray10;
+				border-radius: 6px;
+				@extend .primaryColor;
+
+				&:hover {
+					@extend .primaryBG;
+					@extend .whiteColor;
+				}
+
+				&::before {
+					@extend .metaStyleDash;
+				}
+			}
+
+			&::before {
+				content: none;
+			}
+		}
+
+
+	}
+}
+
+.widget .rt-post-meta {
+	margin-bottom: 6px;
+}

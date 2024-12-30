@@ -1,0 +1,136 @@
+/*===============================
+RT Post Grid
+================================*/
+.blog-grid-5 {
+	.separate-meta {
+		position: absolute;
+		left: 24px;
+		top: 24px;
+		a {
+			background-color: $primary_color;
+			color: $button_color;
+			&:hover {
+				background-color: $tertiary_color;
+				color: $button_text_color;
+			}
+		}
+	}
+	.rt-post-meta {
+		margin-bottom: 16px;
+	}
+	.entry-wrapper {
+		padding-top: 24px;
+	}
+}
+@media (min-width: 1025px) {
+	.blog-list-2.rt-el-post-wrapper .post-thumbnail-wrap {
+		max-width: 286px;
+	}
+}
+.blog-grid-6 {
+	.article-inner-wrapper {
+		&:hover {
+			.post-thumbnail {
+				img {
+					transform: scale(1.07);
+				}
+			}
+		}
+		.post-thumbnail-wrap {
+			margin-bottom: 20px;
+		}
+		.entry-title {
+			line-height: 55px;
+			font-size: 40px;
+			a {
+				transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+				background-image: linear-gradient(to bottom, currentColor 0%, currentColor 98%);
+				background-size: 0 2px;
+				background-repeat: no-repeat;
+				background-position: left 100%;
+				&:hover {
+					@extend .primaryColor;
+					background-size: 100% 2px;
+					transition: all .4s ease-out;
+				}
+			}
+		}
+	}
+}
+
+.rt-post-sm-overlay {
+	&:hover {
+		.article-inner-wrapper {
+			.post-thumbnail {
+				img {
+					transform: scale(1.07);
+				}
+			}
+		}
+	}
+	&:last-child {
+		.article-inner-wrapper {
+			border-bottom: 0;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+	&:nth-child(even) {
+		.article-inner-wrapper {
+			flex-direction: row;
+		}
+	}
+
+	.article-inner-wrapper {
+		display: block;
+		border-bottom: 1px solid #281D00;
+		padding-bottom: 25px;
+		gap: 30px;
+		//margin-bottom: 20px;
+		@media (min-width: 1200px) {
+			flex-direction: row-reverse;
+		}
+		@media (min-width: 768px) {
+			display: flex;
+		}
+		.post-thumbnail-wrap {
+			margin-bottom: 20px;
+			@media (min-width: 768px) {
+				margin-bottom: 0;
+			}
+			.post-thumbnail {
+				a {
+					img {
+						//@media (min-width: 768px) {
+						//	max-width: 220px;
+						//	max-height: 180px;
+						//}
+					}
+				}
+			}
+		}
+		.entry-wrapper {
+			@media (min-width: 768px) {
+				flex: 0 1 300%;
+			}
+			.entry-header {
+				.separate-meta {
+					.category-links {
+						a  {
+							padding: 0;
+							background-color: transparent;
+							color: #7A7A7A;
+							font-size: 16px;
+							font-weight: 500;
+						}
+					}
+				}
+				.entry-title {
+					font-size: 24px;
+					line-height: 34px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

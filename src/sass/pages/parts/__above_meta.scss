@@ -1,0 +1,43 @@
+//Meta Above Title
+.separate-meta {
+	margin-bottom: 10px;
+
+	a {
+		background-color: $primary_color;
+		color: $title_color;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 6px 10px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 0 4px 4px 0;
+		line-height: 1;
+		&:hover {
+			background: $primary_color;
+			color: $button_color;
+		}
+	}
+
+	.sp {
+		display: none;
+	}
+
+	.above-meta-style-border & {
+		a {
+			height: 100%;
+			border: 1px solid $primary_color;
+			padding: 4px 10px;
+			line-height: 1.2;
+			background: $white_color;
+			@extend .primaryColor;
+			&:hover {
+				@extend .primaryBG;
+				@extend .whiteColor;
+			}
+		}
+	}
+
+}

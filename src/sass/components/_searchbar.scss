@@ -1,0 +1,47 @@
+//.rt-sidebar.widget_kariez_search,
+//.rt-single-sidebar.widget_kariez_search {
+//	border: none;
+//	padding: 0;
+//	border-radius: unset;
+//}
+.kariez-search-form .search-box {
+	position: relative;
+	overflow: hidden;
+	input {
+		font-size: 16px;
+		font-weight: 500;
+		height: 60px;
+		padding: 0 55px 0 20px;
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		background-color: #F8F8F8;
+
+	}
+	button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		border: none;
+		border-radius: 0;
+		color: $meta_color;
+		background-color: $primary_color;
+		padding: 0 20px;
+		&:hover {
+			background-color: $title_color;
+			svg {
+				fill: $primary_color;
+			}
+		}
+		svg {
+			fill: $title_color;
+			width: 20px;
+			height: 20px;
+			margin-top: 1.5px;
+		}
+		.btn-label {
+			display: none;
+		}
+	}
+}
