@@ -14,7 +14,8 @@ Section Title
 	.top-sub-title {
 		color: $title_color;
 		font-size: 20px;
-		display: inline-block;
+		display: inline-flex;
+		gap: 5px;
 		align-items: center;
 		text-transform: uppercase;
 		font-weight: 700;
@@ -152,6 +153,11 @@ Section Title
 				background-color: $title_color;
 				display: inline-block;
 				padding: 5px 13px;
+				clip-path: inset(0 100% 0 0);
+				transition: all ease 1s;
+				&.active-animation {
+					clip-path: inset(0 0 0 0);
+				}
 			}
 		}
 	}
@@ -159,17 +165,43 @@ Section Title
 
 .section-title-wrapper-layout-3 {
 	.title-inner-wrapper {
-		.main-title {
-
+		.top-sub-title-wrap {
+			.top-sub-title {
+				position: relative;
+				&:before {
+					content: "";
+					height: 1px;
+					width: 0;
+					background-color: $primary_color;
+					position: absolute;
+					bottom: 5px;
+					left: 0;
+					transition: all ease 1s;
+				}
+				&.active-animation {
+					&:before {
+						width: 100%;
+					}
+				}
+			}
 		}
 	}
 }
+
 
 @media (max-width: 991px) {
 	.section-title-wrapper .description br,
 	.section-title-wrapper .main-title br {
 		display: none;
 	}
+}
+
+.top-sub-title.has-animation .highlight-subtitle {
+	clip-path: inset(0 100% 0 0);
+	transition: all ease 1s;
+}
+.top-sub-title.active-animation .highlight-subtitle {
+	clip-path: inset(0 0 0 0);
 }
 
 /* End Section Title */

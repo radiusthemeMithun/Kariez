@@ -153,8 +153,16 @@ button {
 }
 // button 3
 .rt-button .button-3 {
-	padding: 10px 24px;
 	border-radius: 0;
+	&:hover {
+		color: $title_color;
+	}
+	&:before {
+		background-color: $title_color;
+	}
+	&:after {
+		background-color: $white_color;
+	}
 }
 
 // button 4

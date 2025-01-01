@@ -76,6 +76,22 @@
 		.has-separator li:not(:last-child):after {
 			background-color: $white_color;
 		}
+		.rt-button {
+			.button-2 {
+				&:hover {
+					color: $title_color;
+					i {
+						color: $title_color;
+					}
+				}
+				&:before {
+					background-color: $title_color;
+				}
+				&:after {
+					background-color: $white_color;
+				}
+			}
+		}
 	}
 }
 
