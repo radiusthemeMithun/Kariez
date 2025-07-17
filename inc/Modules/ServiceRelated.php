@@ -139,7 +139,9 @@ class ServiceRelated {
 											<?php } if ( kariez_option( 'rt_service_read_more' ) ) { ?>
 												<div class="rt-button">
 													<a class="btn button-4" href="<?php the_permalink();?>">
-														<?php esc_html_e('See Details' , 'kariez' ); ?>
+														<span class="button-text"><?php esc_html_e('See Details' , 'kariez' ); ?></span>
+														<span class="btn-round-shape">
+														<i class="icon-arrow-right"></i>
 													</a>
 												</div>
 											<?php } ?>

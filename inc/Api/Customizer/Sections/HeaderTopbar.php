@@ -72,9 +72,9 @@ class HeaderTopbar extends Customizer {
 				'default' => 1,
 				'condition' => [ 'rt_top_bar' ]
 			],
-			'rt_topbar_website' => [
+			'rt_topbar_open_time' => [
 				'type'    => 'switch',
-				'label'   => __( 'Topbar Website ?', 'kariez' ),
+				'label'   => __( 'Topbar Open Time ?', 'kariez' ),
 				'default' => 1,
 				'condition' => [ 'rt_top_bar' ]
 			],

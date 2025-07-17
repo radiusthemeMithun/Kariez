@@ -152,12 +152,12 @@ th {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: $gray20;
+	//background: $gray20;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: $meta_color;
+	background: $primary_color;
 }
 
 /* Handle on hover */

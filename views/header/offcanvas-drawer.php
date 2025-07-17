@@ -42,13 +42,13 @@ $topinfo = ( kariez_option( 'rt_contact_address' ) || kariez_option( 'rt_phone' 
 			<?php if( kariez_option( 'rt_contact_info_label' ) ) { ?><label><?php echo kariez_option( 'rt_contact_info_label' ) ?></label><?php } ?>
 			<ul class="offcanvas-info">
 				<?php if( kariez_option( 'rt_contact_address' ) ) { ?>
-					<li><i class="icon-location"></i><?php kariez_html( kariez_option( 'rt_contact_address' ) , false );?> </li>
+					<li><i class="icon-map-pin"></i><?php kariez_html( kariez_option( 'rt_contact_address' ) , false );?> </li>
 				<?php } if( kariez_option( 'rt_phone' ) ) { ?>
 					<li><i class="icon-phone"></i><a href="tel:<?php echo esc_attr( kariez_option( 'rt_phone' ) );?>"><?php kariez_html( kariez_option( 'rt_phone' ) , false );?></a> </li>
 				<?php } if( kariez_option( 'rt_email' ) ) { ?>
-					<li><i class="icon-email"></i><a href="mailto:<?php echo esc_attr( kariez_option( 'rt_email' ) );?>"><?php kariez_html( kariez_option( 'rt_email' ) , false );?></a> </li>
-				<?php } if( kariez_option( 'rt_website' ) ) { ?>
-					<li><i class="icon-rt-development-service"></i><?php kariez_html( kariez_option( 'rt_website' ) , false );?></li>
+					<li><i class="icon-mail"></i><a href="mailto:<?php echo esc_attr( kariez_option( 'rt_email' ) );?>"><?php kariez_html( kariez_option( 'rt_email' ) , false );?></a> </li>
+				<?php } if( kariez_option( 'rt_open_time' ) ) { ?>
+					<li><i class="icon-clock"></i><?php kariez_html( kariez_option( 'rt_open_time' ) , false );?></li>
 				<?php } ?>
 			</ul>
 		<?php } ?>

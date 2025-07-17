@@ -4,21 +4,28 @@ button {
 }
 
 .btn {
-	color: $title_color;
-	background-color: $primary_color;
-	text-align: center;
-	display: inline-block;
-	padding: 16px 30px 15px;
-	transition: all .3s ease-in-out;
+
+	background-color: #F9F9F9;
+	text-align: left;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 10px 7px 10px 30px;
 	position: relative;
 	overflow: hidden;
-	z-index: 2;
-	font-weight: 700;
-	text-transform: uppercase;
+	z-index: 1;
+	font-weight: 500;
+	text-transform: capitalize;
+	height: 55px;
+	//width: 190px;
 	border: 0;
-	border-radius: 0;
-	font-size: 16px;
-	@include transition_default();
+	border-radius: 30px;
+	font-size: 15px;
+	transition: all .4s cubic-bezier(.42,0,.58,1);
+	transition-delay: 0s;
 
 	&:active {
 		box-shadow: none;
@@ -71,182 +78,159 @@ button {
 	@include button_style($white_color, $meta_color, $primary_color);
 }
 .rt-button .btn {
-	column-gap: 10px;
+	.button-text {
+		position: relative;
+		color: $title_color;
+		display: block;
+		margin-right: 10px;
+		transition: all .4s cubic-bezier(.42,0,.58,1);
+		transition-delay: .1s;
+	}
 	&::before {
 		content: "";
+		width: 100%;
+		height: 100%;
+		display: block;
 		position: absolute;
 		top: 0;
+		right: auto;
+		bottom: auto;
 		left: 0;
-		bottom: 0;
-		right: 0;
-		background-color: $white_color;
-		transform: scalex(0.0);
-		transform-origin: center;
-		transform-style: preserve-3d;
-		transition: all 0.3s linear;
-		transform-origin: left center;
+		background-color: $primary_color;
+		transform: translate(calc(-100% - 2px));
+		border-radius: 30px;
+		transition: all .6s cubic-bezier(.645,.045,.355,1);
+		transition-delay: 0s;
 		z-index: -1;
 	}
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		background-color: $title_color;
-		transform: scaleY(0.0);
-		transform-origin: center;
-		transform-style: preserve-3d;
-		transition: all 0.3s linear;
-		transform-origin: right center;
-		z-index: -1;
-	}
-	i {
-		font-size: 18px;
-		display: inline-block;
-		transition: all 0.3s ease-in-out 0s;
-		margin-left: 5px;
+	.btn-round-shape {
+		transition: all .4s cubic-bezier(.42,0,.58,1);
+		transition-delay: .1s;
+		height: 45px;
+		width: 45px;
+		background-color: $primary_color;
+		border-radius: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		i {
+			font-size: 18px;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50% ,-50%);
+			right: auto;
+			bottom: auto;
+			left: 50%;
+		}
+		&:before {
+			transition: all .4s cubic-bezier(.42,0,.58,1);
+			transition-delay: .2s;
+			margin: 0;
+			width: auto;
+			display: block;
+		}
 	}
 	&:hover {
-		color: $primary_color;
+		color: $title_color;
 		&::before {
-			transform: scalex(1.0);
-			transform-origin: left center;
-			transition-delay: 100ms;
+			transform: translate(0);
+			transition: all .4s cubic-bezier(.42,0,.58,1);
+			transition-delay: 0s;
 		}
-		&::after {
-			transform: scaleY(1.0);
-			transform-origin: right center;
-			transition-delay: 100ms;
+		.btn-round-shape {
+			transition: all .4s cubic-bezier(.42,0,.58,1);
+			transition-delay: .2s;
+			background-color: $white_color;
+			i {
+				transition: all .4s cubic-bezier(.42,0,.58,1);
+				transition-delay: .2s;
+				&:before {
+					animation: move-forward-right .6s cubic-bezier(.645,.045,.355,1) 0s both 1;
+				}
+			}
 		}
 	}
 }
-// button 1
-.button-1 {
-	color: $title_color;
-	i {
-		color: $title_color;
+ //button 2
+
+.rt-button .button-2 {
+	background-color: rgba(249, 249, 249, .1);
+	.button-text {
+		color: $white_color;
 	}
-	&:hover {
-		color: $primary_color;
-		i {
-			color: $primary_color;
-		}
+	&:before {
+		background-color: $white_color;
 	}
 
-}
-// button 2
-.rt-button .button-2 {
-	color: $button_text_color;
-	padding: 8px 18px 6px;
-	height: 50px;
-	line-height: 36px;
 	i {
 		color: $button_text_color;
 	}
 	&:hover {
-		i {
-			color: $primary_color;
+		.button-text {
+			color: $title_color;
+		}
+		.btn-round-shape {
+			background-color: $primary_color;
 		}
 	}
 }
-// button 3
+
 .rt-button .button-3 {
-	border-radius: 0;
-	&:hover {
-		color: $title_color;
-	}
-	&:before {
-		background-color: $title_color;
-	}
-	&:after {
-		background-color: $white_color;
-	}
-}
-
-// button 4
-.rt-button .button-4 {
-	padding: 10px 24px;
-	border-radius: 0;
-	background-color: $title_color;
-	color: $white_color;
-	&:hover {
-		i {
-			color: $primary_color;
-		}
-	}
-	&:before {
-		background-color: $primary_color;
-	}
-	&:after {
-		background-color: $white_color;
-	}
-	i {
-		transition: all 0.3s ease-in-out 0s;
-		font-size: 13px;
-	}
-}
-// button 5
-.rt-button .button-5 {
-
-	border-radius: 0;
-	background-color: $white_color;
-	color: $title_color;
-	i {
-		position: relative;
-		top: -1px;
-		font-weight: 900;
-	}
-	&:hover {
-		color: $primary_color;
-		i {
-			color: $primary_color;
-		}
-	}
-	&:before {
-		background-color: $primary_color;
-	}
-	&:after {
-		background-color: $title_color;
-	}
-}
-
-.rt-button .button-6 {
-
-	border-radius: 0;
 	background-color: transparent;
 	color: $title_color;
-	padding: 0;
-	position: relative;
+	border: 1px solid $title_color;
+	&:before {
+		background-color: $primary_color;
+	}
 	i {
-		position: relative;
-		top: -1px;
-		font-weight: 900;
+		color: $button_text_color;
 	}
 	&:hover {
-		color: $title_color;
-		&:after {
-			width: 100%;
+		border-color: $primary_color;
+		.btn-round-shape {
+			background-color: $white_color;
 		}
-		i {
-			color: $primary_color;
-		}
-	}
-	&:before {
-		display: none;
-	}
-	&:after {
-		content: "";
-		height: 1px;
-		width: 0%;
-		background-color: $title_color;
-		position: absolute;
-		bottom: 8px;
-		display: inline-block;
-		left: 0;
-		top: auto;
-		right: auto;
-		transition: width .4s ease;
 	}
 }
+
+.rt-button .button-4 {
+	color: $title_color;
+	&:before {
+		background-color: $title_color;
+	}
+	i {
+		color: $button_text_color;
+	}
+	&:hover {
+		.button-text {
+			color: $white_color;
+		}
+		.btn-round-shape {
+			background-color: $white_color;
+		}
+	}
+}
+.rt-button .button-5 {
+	color: $title_color;
+	background-color: $primary_color;
+	.button-text {
+		margin-right: 0;
+	}
+	&:before {
+		background-color: $title_color;
+	}
+	i {
+		color: $button_text_color;
+	}
+	&:hover {
+		.button-text {
+			color: $white_color;
+		}
+		i {
+			color: $white_color;
+		}
+	}
+}
+
+

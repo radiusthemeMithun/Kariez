@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Kariez Theme
+# Copyright (C) 2025 Kariez Theme
 # This file is distributed under the same license as the Kariez Theme package.
 msgid ""
 msgstr ""
@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-23 08:42+0000\n"
+"POT-Creation-Date: 2025-06-12 10:24+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -49,111 +49,115 @@ msgstr ""
 msgid "Add a menu"
 msgstr ""
 
-#: ../inc/template-tags.php:216, ../inc/template-tags.php:1340
+#: ../inc/template-tags.php:216, ../inc/template-tags.php:1373
 msgid "Home"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:363, ../inc/Core/Tags.php:50, ../inc/Core/Tags.php:55
+#: ../inc/template-tags.php:384, ../inc/Core/Tags.php:50, ../inc/Core/Tags.php:55
 msgid ", "
 msgstr ""
 
-#: ../inc/template-tags.php:413
+#: ../inc/template-tags.php:434
 msgid "%s %s"
 msgstr ""
 
-#: ../inc/template-tags.php:751
+#: ../inc/template-tags.php:779
 msgid "%s mins read"
 msgstr ""
 
-#: ../inc/template-tags.php:749
+#: ../inc/template-tags.php:777
 msgid "1 min read"
 msgstr ""
 
-#: ../inc/template-tags.php:747
+#: ../inc/template-tags.php:775
 msgid "%s hours read"
 msgstr ""
 
-#: ../inc/template-tags.php:745
+#: ../inc/template-tags.php:773
 msgid "Less than a minute"
 msgstr ""
 
-#: ../inc/template-tags.php:835, ../inc/Helpers/Fns.php:358
+#: ../inc/template-tags.php:863, ../inc/Helpers/Fns.php:358
 msgid "Views"
 msgstr ""
 
-#: ../inc/template-tags.php:833
+#: ../inc/template-tags.php:861
 msgid "View"
 msgstr ""
 
-#: ../inc/template-tags.php:856, ../inc/Api/Customizer/Sections/Labels.php:118
+#: ../inc/template-tags.php:884, ../inc/Api/Customizer/Sections/Labels.php:139
 msgid "By"
 msgstr ""
 
-#: ../inc/template-tags.php:862
+#: ../inc/template-tags.php:890
 msgid "Comment: %s"
 msgid_plural "Comments: %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:1153
+#: ../inc/template-tags.php:1079, ../inc/Api/Customizer/Sections/Labels.php:158
+msgid "Continue Reading"
+msgstr ""
+
+#: ../inc/template-tags.php:1186
 msgid "Ph: "
 msgstr ""
 
-#: ../inc/template-tags.php:1416
+#: ../inc/template-tags.php:1449
 msgid "Shop"
 msgstr ""
 
-#: ../inc/template-tags.php:1412
+#: ../inc/template-tags.php:1445
 msgid "Blog"
 msgstr ""
 
-#: ../inc/template-tags.php:1403
+#: ../inc/template-tags.php:1436
 msgid "Posts by: "
 msgstr ""
 
-#: ../inc/template-tags.php:1375
+#: ../inc/template-tags.php:1408
 msgid "Posts Category: "
 msgstr ""
 
-#: ../inc/template-tags.php:1363
+#: ../inc/template-tags.php:1396
 msgid "404"
 msgstr ""
 
-#: ../inc/template-tags.php:1358
+#: ../inc/template-tags.php:1391
 msgid "Search results for: "
 msgstr ""
 
-#: ../inc/template-tags.php:1353
+#: ../inc/template-tags.php:1386
 msgid "Posts made in: "
 msgstr ""
 
-#: ../inc/template-tags.php:1346
+#: ../inc/template-tags.php:1379
 msgid "Posts Tagged: "
 msgstr ""
 
-#: ../inc/template-tags.php:1455
+#: ../inc/template-tags.php:1488
 msgid "Pingback:"
 msgstr ""
 
-#: ../inc/template-tags.php:1476
+#: ../inc/template-tags.php:1509
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: ../inc/template-tags.php:1482
+#: ../inc/template-tags.php:1515
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../inc/template-tags.php:1487
+#: ../inc/template-tags.php:1520
 msgid "Edit"
 msgstr ""
 
-#: ../inc/template-tags.php:1495
+#: ../inc/template-tags.php:1528
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../inc/template-tags.php:1506
+#: ../inc/template-tags.php:1539
 msgid "Reply"
 msgstr ""
 
@@ -230,27 +234,27 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:142
+#: ../inc/Custom/Extras.php:146
 msgid "Make as Mega Menu"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:144
+#: ../inc/Custom/Extras.php:148
 msgid "Choose Mega Menu"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:159
+#: ../inc/Custom/Extras.php:163
 msgid "Mega menu - %1$s Col %2$s"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:171
+#: ../inc/Custom/Extras.php:175
 msgid "Query String"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:230
+#: ../inc/Custom/Extras.php:234
 msgid "Type your search"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:233
+#: ../inc/Custom/Extras.php:237
 msgid "Search"
 msgstr ""
 
@@ -775,7 +779,7 @@ msgstr ""
 msgid "All Category"
 msgstr ""
 
-#: ../inc/Modules/ProjectRelated.php:131, ../inc/Modules/ServiceRelated.php:142, ../views/content-project-2.php:54, ../views/content-project-3.php:45, ../views/content-project.php:45, ../views/content-service.php:49
+#: ../inc/Modules/ProjectRelated.php:132, ../inc/Modules/ServiceRelated.php:142, ../views/content-project-2.php:45, ../views/content-project.php:50, ../views/content-service-2.php:41, ../views/content-service.php:49
 msgid "See Details"
 msgstr ""
 
@@ -1111,7 +1115,7 @@ msgstr ""
 msgid "Gap 5"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Blog.php:88, ../inc/Api/Customizer/Sections/Project.php:103, ../inc/Api/Customizer/Sections/Service.php:76, ../inc/Api/Customizer/Sections/Team.php:87
+#: ../inc/Api/Customizer/Sections/Blog.php:88, ../inc/Api/Customizer/Sections/Project.php:98, ../inc/Api/Customizer/Sections/Service.php:76, ../inc/Api/Customizer/Sections/Team.php:87
 msgid "Content Limit"
 msgstr ""
 
@@ -1323,7 +1327,7 @@ msgstr ""
 msgid "Choose Single Meta"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:68, ../inc/Api/Customizer/Sections/Project.php:133, ../inc/Api/Customizer/Sections/Service.php:113, ../inc/Api/Customizer/Sections/Team.php:117
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:68, ../inc/Api/Customizer/Sections/Project.php:128, ../inc/Api/Customizer/Sections/Service.php:113, ../inc/Api/Customizer/Sections/Team.php:117
 msgid "Single Banner Title"
 msgstr ""
 
@@ -1367,7 +1371,7 @@ msgstr ""
 msgid "Post Single Related Option"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:125, ../inc/Api/Customizer/Sections/Project.php:192, ../inc/Api/Customizer/Sections/Service.php:119, ../inc/Api/Customizer/Sections/Team.php:173
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:125, ../inc/Api/Customizer/Sections/Project.php:187, ../inc/Api/Customizer/Sections/Service.php:119, ../inc/Api/Customizer/Sections/Team.php:173
 msgid "Related Visibility"
 msgstr ""
 
@@ -1379,11 +1383,11 @@ msgstr ""
 msgid "Related Post"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:138, ../inc/Api/Customizer/Sections/Project.php:205, ../inc/Api/Customizer/Sections/Service.php:132, ../inc/Api/Customizer/Sections/Team.php:186
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:138, ../inc/Api/Customizer/Sections/Project.php:200, ../inc/Api/Customizer/Sections/Service.php:132, ../inc/Api/Customizer/Sections/Team.php:186
 msgid "Related Item Limit"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:145, ../inc/Api/Customizer/Sections/Project.php:219, ../inc/Api/Customizer/Sections/Service.php:139, ../inc/Api/Customizer/Sections/Team.php:193
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:145, ../inc/Api/Customizer/Sections/Project.php:214, ../inc/Api/Customizer/Sections/Service.php:139, ../inc/Api/Customizer/Sections/Team.php:193
 msgid "Query Type"
 msgstr ""
 
@@ -1391,19 +1395,19 @@ msgstr ""
 msgid "Post Query Type"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:149, ../inc/Api/Customizer/Sections/Project.php:223, ../inc/Api/Customizer/Sections/Service.php:143, ../inc/Api/Customizer/Sections/Team.php:197
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:149, ../inc/Api/Customizer/Sections/Project.php:218, ../inc/Api/Customizer/Sections/Service.php:143, ../inc/Api/Customizer/Sections/Team.php:197
 msgid "Posts in the same Categories"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:150, ../inc/Api/Customizer/Sections/Project.php:224, ../inc/Api/Customizer/Sections/Service.php:144, ../inc/Api/Customizer/Sections/Team.php:198
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:150, ../inc/Api/Customizer/Sections/Project.php:219, ../inc/Api/Customizer/Sections/Service.php:144, ../inc/Api/Customizer/Sections/Team.php:198
 msgid "Posts in the same Tags"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:151, ../inc/Api/Customizer/Sections/Project.php:225, ../inc/Api/Customizer/Sections/Service.php:145, ../inc/Api/Customizer/Sections/Team.php:199
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:151, ../inc/Api/Customizer/Sections/Project.php:220, ../inc/Api/Customizer/Sections/Service.php:145, ../inc/Api/Customizer/Sections/Team.php:199
 msgid "Posts by the same Author"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:158, ../inc/Api/Customizer/Sections/Project.php:232, ../inc/Api/Customizer/Sections/Service.php:152, ../inc/Api/Customizer/Sections/Team.php:206
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:158, ../inc/Api/Customizer/Sections/Project.php:227, ../inc/Api/Customizer/Sections/Service.php:152, ../inc/Api/Customizer/Sections/Team.php:206
 msgid "Sort Order"
 msgstr ""
 
@@ -1411,23 +1415,23 @@ msgstr ""
 msgid "Display Post Order"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:162, ../inc/Api/Customizer/Sections/Project.php:236, ../inc/Api/Customizer/Sections/Service.php:156, ../inc/Api/Customizer/Sections/Team.php:210
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:162, ../inc/Api/Customizer/Sections/Project.php:231, ../inc/Api/Customizer/Sections/Service.php:156, ../inc/Api/Customizer/Sections/Team.php:210
 msgid "Recent Posts"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:163, ../inc/Api/Customizer/Sections/Project.php:237, ../inc/Api/Customizer/Sections/Service.php:157, ../inc/Api/Customizer/Sections/Team.php:211
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:163, ../inc/Api/Customizer/Sections/Project.php:232, ../inc/Api/Customizer/Sections/Service.php:157, ../inc/Api/Customizer/Sections/Team.php:211
 msgid "Random Posts"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:164, ../inc/Api/Customizer/Sections/Project.php:238, ../inc/Api/Customizer/Sections/Service.php:158, ../inc/Api/Customizer/Sections/Team.php:212
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:164, ../inc/Api/Customizer/Sections/Project.php:233, ../inc/Api/Customizer/Sections/Service.php:158, ../inc/Api/Customizer/Sections/Team.php:212
 msgid "Last Modified Posts"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:165, ../inc/Api/Customizer/Sections/Project.php:239, ../inc/Api/Customizer/Sections/Service.php:159, ../inc/Api/Customizer/Sections/Team.php:213
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:165, ../inc/Api/Customizer/Sections/Project.php:234, ../inc/Api/Customizer/Sections/Service.php:159, ../inc/Api/Customizer/Sections/Team.php:213
 msgid "Most Commented posts"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/BlogSingle.php:166, ../inc/Api/Customizer/Sections/Project.php:240, ../inc/Api/Customizer/Sections/Service.php:160, ../inc/Api/Customizer/Sections/Team.php:214
+#: ../inc/Api/Customizer/Sections/BlogSingle.php:166, ../inc/Api/Customizer/Sections/Project.php:235, ../inc/Api/Customizer/Sections/Service.php:160, ../inc/Api/Customizer/Sections/Team.php:214
 msgid "Most Viewed posts"
 msgstr ""
 
@@ -1659,8 +1663,8 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Contact.php:54, ../views/content-single-team.php:130
-msgid "Website"
+#: ../inc/Api/Customizer/Sections/Contact.php:54
+msgid "Open Time"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Contact.php:59
@@ -1832,7 +1836,7 @@ msgid "1364px"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/General.php:84
-msgid "1296px"
+msgid "1320px"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/General.php:85
@@ -1935,11 +1939,15 @@ msgstr ""
 msgid "Offcanvas Social"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Header.php:156
-msgid "Track Ordered Button ?"
+#: ../inc/Api/Customizer/Sections/Header.php:151
+msgid "Phone ?"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Header.php:162
+#: ../inc/Api/Customizer/Sections/Header.php:160
+msgid "Get Started Button ?"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Header.php:168
 msgid "Button Link"
 msgstr ""
 
@@ -1972,7 +1980,7 @@ msgid "Topbar Email ?"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/HeaderTopbar.php:77
-msgid "Topbar Website ?"
+msgid "Topbar Open Time ?"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/HeaderTopbar.php:83
@@ -2008,102 +2016,126 @@ msgid "Content: SignIn Button"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Labels.php:61, ../inc/Api/Customizer/Sections/Labels.php:62
-msgid "Track Ordered"
+msgid "Have Any Questions?"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Labels.php:63
-msgid "Content: Track Ordered"
+msgid "Content: Have Any Questions?"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:69, ../inc/Api/Customizer/Sections/Labels.php:70
-msgid "Contact Info"
+#: ../inc/Api/Customizer/Sections/Labels.php:67, ../inc/Api/Customizer/Sections/Labels.php:68
+msgid "Call Us"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:71
-msgid "Content: Contact Info"
+#: ../inc/Api/Customizer/Sections/Labels.php:69
+msgid "Content: Call Us"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:76, ../inc/Api/Customizer/Sections/Labels.php:77
-msgid "Follow Us On"
+#: ../inc/Api/Customizer/Sections/Labels.php:74
+msgid "Phone Number"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:78
-msgid "Content: Follow Us On"
+#: ../inc/Api/Customizer/Sections/Labels.php:75
+msgid "+456 775 4566"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:83
-msgid "About Us"
+#: ../inc/Api/Customizer/Sections/Labels.php:76
+msgid "Content: +456 775 4566"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Labels.php:82, ../inc/Api/Customizer/Sections/Labels.php:83
+msgid "Get Started"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Labels.php:84
+msgid "Content: Get Started"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Labels.php:90, ../inc/Api/Customizer/Sections/Labels.php:91
+msgid "Contact Info"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Labels.php:92
+msgid "Content: Contact Info"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Labels.php:97, ../inc/Api/Customizer/Sections/Labels.php:98
+msgid "Follow Us On"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Labels.php:99
+msgid "Content: Follow Us On"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Labels.php:104
+msgid "About Us"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Labels.php:105
 msgid "Content: About Us"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:89
+#: ../inc/Api/Customizer/Sections/Labels.php:110
 msgid "About Text"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:90
+#: ../inc/Api/Customizer/Sections/Labels.php:111
 msgid "Enter about text here."
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:95
+#: ../inc/Api/Customizer/Sections/Labels.php:116
 msgid "Footer Labels"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:100
+#: ../inc/Api/Customizer/Sections/Labels.php:121
 msgid "Are You Ready"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:101
+#: ../inc/Api/Customizer/Sections/Labels.php:122
 msgid "ARE YOU READY TO GET STARTED?"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:102
+#: ../inc/Api/Customizer/Sections/Labels.php:123
 msgid "Content: Footer Are You Ready"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:107, ../inc/Api/Customizer/Sections/Labels.php:108
+#: ../inc/Api/Customizer/Sections/Labels.php:128, ../inc/Api/Customizer/Sections/Labels.php:129
 msgid "Contact Us"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:109
+#: ../inc/Api/Customizer/Sections/Labels.php:130
 msgid "Content: Footer contact button"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:114
+#: ../inc/Api/Customizer/Sections/Labels.php:135
 msgid "Blog Labels"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:120
+#: ../inc/Api/Customizer/Sections/Labels.php:141
 msgid "Content: Meta Author Prefix"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:124, ../inc/Api/Customizer/Sections/Labels.php:125
+#: ../inc/Api/Customizer/Sections/Labels.php:145, ../inc/Api/Customizer/Sections/Labels.php:146
 msgid "Tags:"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:126
+#: ../inc/Api/Customizer/Sections/Labels.php:147
 msgid "Content: Single blog footer tags label"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:130, ../inc/Api/Customizer/Sections/Labels.php:131
+#: ../inc/Api/Customizer/Sections/Labels.php:151, ../inc/Api/Customizer/Sections/Labels.php:152
 msgid "Socials:"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:132
+#: ../inc/Api/Customizer/Sections/Labels.php:153
 msgid "Content: Single blog footer Socials label"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:136
+#: ../inc/Api/Customizer/Sections/Labels.php:157
 msgid "Blog Read More:"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Labels.php:137
-msgid "Continue Reading"
-msgstr ""
-
-#: ../inc/Api/Customizer/Sections/Labels.php:138
+#: ../inc/Api/Customizer/Sections/Labels.php:159
 msgid "Content: Single blog footer read more text"
 msgstr ""
 
@@ -2147,14 +2179,6 @@ msgstr ""
 msgid "Team Single Layout"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/LayoutsWooArchive.php:30
-msgid "Woocommerce Archive"
-msgstr ""
-
-#: ../inc/Api/Customizer/Sections/LayoutsWooSingle.php:31
-msgid "Woocommerce Single"
-msgstr ""
-
 #: ../inc/Api/Customizer/Sections/Project.php:28
 msgid "Project Option"
 msgstr ""
@@ -2183,11 +2207,7 @@ msgstr ""
 msgid "Project 02"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:56
-msgid "Project 03"
-msgstr ""
-
-#: ../inc/Api/Customizer/Sections/Project.php:62
+#: ../inc/Api/Customizer/Sections/Project.php:61
 msgid "Archive Item Limit"
 msgstr ""
 
@@ -2199,95 +2219,91 @@ msgstr ""
 msgid "Grayscale"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:78, ../inc/Api/Customizer/Sections/Project.php:151
+#: ../inc/Api/Customizer/Sections/Project.php:78, ../inc/Api/Customizer/Sections/Project.php:146
 msgid "Category Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:84
-msgid "Subtitle Visibility"
-msgstr ""
-
-#: ../inc/Api/Customizer/Sections/Project.php:90
+#: ../inc/Api/Customizer/Sections/Project.php:85
 msgid "Button Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:96, ../inc/Api/Customizer/Sections/Service.php:70, ../inc/Api/Customizer/Sections/Team.php:81
+#: ../inc/Api/Customizer/Sections/Project.php:91, ../inc/Api/Customizer/Sections/Service.php:70, ../inc/Api/Customizer/Sections/Team.php:81
 msgid "Excerpt Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:110, ../inc/Api/Customizer/Sections/Service.php:90, ../inc/Api/Customizer/Sections/Team.php:94
+#: ../inc/Api/Customizer/Sections/Project.php:105, ../inc/Api/Customizer/Sections/Service.php:90, ../inc/Api/Customizer/Sections/Team.php:94
 msgid "Archive Banner Title"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:111
+#: ../inc/Api/Customizer/Sections/Project.php:106
 msgid "Our Projects"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:116, ../inc/Api/Customizer/Sections/Service.php:96, ../inc/Api/Customizer/Sections/Team.php:100
+#: ../inc/Api/Customizer/Sections/Project.php:111, ../inc/Api/Customizer/Sections/Service.php:96, ../inc/Api/Customizer/Sections/Team.php:100
 msgid "Archive Slug"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:122, ../inc/Api/Customizer/Sections/Service.php:102, ../inc/Api/Customizer/Sections/Team.php:106
+#: ../inc/Api/Customizer/Sections/Project.php:117, ../inc/Api/Customizer/Sections/Service.php:102, ../inc/Api/Customizer/Sections/Team.php:106
 msgid "Category Slug"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:128
+#: ../inc/Api/Customizer/Sections/Project.php:123
 msgid "Project Single Option"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:134
+#: ../inc/Api/Customizer/Sections/Project.php:129
 msgid "Project Details"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:139
+#: ../inc/Api/Customizer/Sections/Project.php:134
 msgid "Info Title Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:145
+#: ../inc/Api/Customizer/Sections/Project.php:140
 msgid "Text Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:157
+#: ../inc/Api/Customizer/Sections/Project.php:152
 msgid "Client Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:163
+#: ../inc/Api/Customizer/Sections/Project.php:158
 msgid "Start Time Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:169
+#: ../inc/Api/Customizer/Sections/Project.php:164
 msgid "End Time Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:175
+#: ../inc/Api/Customizer/Sections/Project.php:170
 msgid "Weblink Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:181
+#: ../inc/Api/Customizer/Sections/Project.php:176
 msgid "Rating Visibility"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:187
+#: ../inc/Api/Customizer/Sections/Project.php:182
 msgid "Project Single Related Option"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:198
+#: ../inc/Api/Customizer/Sections/Project.php:193
 msgid "Project Related Title"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:199
+#: ../inc/Api/Customizer/Sections/Project.php:194
 msgid "Related Projects"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:212
+#: ../inc/Api/Customizer/Sections/Project.php:207
 msgid "Related Title Limit"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:220
+#: ../inc/Api/Customizer/Sections/Project.php:215
 msgid "Project Query Type"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Project.php:233
+#: ../inc/Api/Customizer/Sections/Project.php:228
 msgid "Display Project Order"
 msgstr ""
 
@@ -2736,10 +2752,6 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../views/content-service-2.php:41
-msgid "Read more"
-msgstr ""
-
 #: ../views/content-single-project.php:49
 msgid "Client"
 msgstr ""
@@ -2766,6 +2778,10 @@ msgstr ""
 
 #: ../views/content-single-team.php:125
 msgid "E-mail"
+msgstr ""
+
+#: ../views/content-single-team.php:130
+msgid "Website"
 msgstr ""
 
 #: ../views/content-single-team.php:135

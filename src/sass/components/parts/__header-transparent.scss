@@ -11,6 +11,9 @@
 			height: 220px;
 			z-index: -1;
 			pointer-events: none;
+			@media (max-width: 767px) {
+				display: none;
+			}
 		}
 	}
 	.site-header {
@@ -34,7 +37,7 @@
 					color: $white_color;
 
 					svg {
-						fill: $white_color;
+						color: #fff;
 					}
 				}
 			}
@@ -54,7 +57,6 @@
 
 	.menu-icon-wrapper {
 		.menu-search-bar {
-			border: 1px solid rgba(255, 255, 255, .5);
 			&:hover {
 				i {
 					color: $title_color;
@@ -65,7 +67,7 @@
 			}
 		}
 		a svg {
-			fill: $white_color;
+			color: $white_color;
 		}
 
 		.ham_burger {
@@ -73,22 +75,30 @@
 				stroke: $white_color;
 			}
 		}
+		.rt-phone-2 {
+			.phone-box {
+				.content {
+					.phone-label {
+						color: #E9E5E5;
+					}
+					.phone-number {
+						color: #fff;
+						&:hover {
+							color: $primary_color;
+						}
+					}
+				}
+			}
+		}
 		.has-separator li:not(:last-child):after {
 			background-color: $white_color;
 		}
 		.rt-button {
-			.button-2 {
+			.button-3 {
+				border: 1px solid #fff;
+				color: $white_color;
 				&:hover {
-					color: $title_color;
-					i {
-						color: $title_color;
-					}
-				}
-				&:before {
-					background-color: $title_color;
-				}
-				&:after {
-					background-color: $white_color;
+					border-color: $primary_color;
 				}
 			}
 		}

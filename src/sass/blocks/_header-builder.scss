@@ -1,2 +1,9 @@
 // Header builder
 
+.kariez-header-builder {
+	&:before {
+		display: none;
+	}
+}
+
+

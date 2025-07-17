@@ -1,0 +1,82 @@
+.rt-marquee-slider {
+	position: relative;
+}
+.rt-marquee-slider .rt-marquee {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 20px;
+	line-height: 1;
+}
+.rt-marquee-slider .rt-marquee.marquee-left .rt-marquee-item {
+	display: inline-block;
+	will-change: transform;
+	animation: marquee_left 40s linear infinite;
+}
+.rt-marquee-slider .rt-marquee.marquee-right .rt-marquee-item {
+	display: inline-block;
+	will-change: transform;
+	animation: marquee_right 40s linear infinite;
+}
+.rt-marquee-slider .rt-marquee:hover .rt-marquee-item {
+	animation-play-state: paused;
+}
+.rt-marquee-slider .rt-marquee-item .entry-title {
+	display: inline-flex;
+	align-items: center;
+	font-size: 30px;
+	line-height: 1.4;
+	font-weight: 600;
+	position: relative;
+	margin-bottom: 0;
+	z-index: 1;
+
+	a {
+		color: $title_color;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+		a {
+			color: $white_color;
+		}
+		.icon-holder {
+			svg {
+				path {
+					fill: $white_color;
+				}
+			}
+		}
+	}
+	.icon-holder {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+		text-align: center;
+		svg {
+			path {
+				fill: $title_color;
+				transition: all .3s ease-in-out;
+			}
+		}
+	}
+}
+
+.rt-marquee-slider .rt-marquee-item .entry-title:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	color: $primary_color;
+	white-space: nowrap;
+	content: attr(data-per);
+	transition: all 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87);
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+
+

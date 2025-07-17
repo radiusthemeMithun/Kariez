@@ -24,26 +24,14 @@
 			position: relative;
 			z-index: 1;
 			&:hover {
-				&::after {
-					transform: scale(.9);
-				}
+				border-color: $primary_color;
+				background-color: $primary_color;
+
 				i {
-					color: $primary_color;
+					color: $title_color;
 				}
 			}
-			&::after {
-				content: "";
-				transform: scale(0);
-				background-color: $title_color;
-				position: absolute;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				z-index: -1;
-				transition: 0.4s;
-				border-radius: 100%;
-			}
+
 			i {
 				display: block;
 				font-size: 14px;

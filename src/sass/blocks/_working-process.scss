@@ -115,74 +115,82 @@
 	}
 }
 .rt-process-layout-2 {
-	.rt-step {
-		color: $meta_color;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 15px;
+	.process-item {
+		&:hover {
+			.process-info-img {
+				img {
+					transform: scale(1.1);
+				}
+			}
+			.rt-number {
+				color: $primary_color;
+				&:before {
+					transform: scale(1);
+				}
+			}
+		}
+		.process-info-img {
+			height: 180px;
+			width: 180px;
+			border-radius: 100%;
+			margin: auto;
+			margin-bottom: 20px;
+			img {
+				border-radius: 100%;
+				transition: all 0.21s cubic-bezier(.3,.02,0,.6);
+			}
+		}
+		&.odd {
+			margin-top: 0;
+		}
+		&.even {
+			margin-top: 50px;
+		}
 	}
 	.rt-number {
 		position: absolute;
-		left: 0;
-		right: 0;
-		top: -25px;
-		margin: auto;
-		font-size: 18px;
-		font-weight: 700;
-		height: 60px;
-		width: 60px;
+		right: 80px;
+		top: 60px;
+		font-size: 30px;
+		font-weight: 500;
+		font-family: $heading_font;
+		height: 80px;
+		width: 80px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		color: $button_text_color;
-		background-color: $tertiary_color;
-		border: 7px solid $primary_color;
-		border-radius: 50%;
+		background-color: $primary_color;
+		border-radius: 100%;
 		@include transition_default();
+		z-index: 1;
+		transition: .6s;
+		@media(max-width: 992px) {
+			right: 0;
+			left: 0;
+			margin: auto;
+		}
+		&:before {
+			content: "";
+			height: 100%;
+			width: 100%;
+			background-color: $title_color;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 100%;
+			transform: scale(0);
+			transition: .3s;
+			z-index: -1;
+		}
 	}
 	.process-content {
-		box-shadow: 0 22px 30px rgba(0, 46, 39, 0.5);
-		border-radius: 10px 30px;
-		padding: 53px 30px 35px;
-		@include transition_default();
-	}
-}
-.rt-process-layout-3 {
-	.process-item {
-		background-color: $body_bg_color;
-		border-bottom: 2px solid $border_color;
-		border-radius: 30px;
-		box-shadow: 0 0 5px rgba(0, 46, 39, 0.1);
-		padding: 50px 50px 90px;
-		overflow: hidden;
-		&.left {
-			.rt-number {
-				right: auto;
-			}
-		}
-		&.right {
-			.rt-number {
-				left: auto;
-			}
+		.rt-title {
+			font-size: 24px;
+			font-weight: 600;
 		}
 	}
-	.process-info {
-		margin-bottom: 0;
-	}
-	.rt-step {
-		color: $meta_color;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 15px;
-	}
-	.rt-number {
-		color: $border_color;
-		font-weight: 700;
-		font-size: 100px;
-		line-height: 1;
-		text-transform: capitalize;
-		@include transition_default();
-		position: absolute;
-		bottom: -115px;
-		left: 0;
-		right: 0;
-		margin: auto;
-	}
 }
+

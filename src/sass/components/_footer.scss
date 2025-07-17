@@ -3,16 +3,6 @@
 .site-footer {
 	position: relative;
 	z-index: 1;
-	&::before {
-		content: url(../images/footer-bg.svg);
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		z-index: -1;
-		@media(max-width: 1024px) {
-			display: none;
-		}
-	}
 	.footer-container {
 		position: relative;
 		z-index: 1;
@@ -42,3 +32,4 @@
 
 //Footer layout
 @import "parts/_footer-1";
+

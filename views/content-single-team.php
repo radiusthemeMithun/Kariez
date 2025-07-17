@@ -54,7 +54,7 @@ if ( kariez_option( 'rt_team_single_author_order' ) == 'thumb-right') {
 							<?php
 
 							foreach ($rt_team_qualification_label as $qualification_label) { ?>
-								<span class="rt-qualification-name"><i class="icon-circle-check"></i><?php echo $qualification_label['qualification_name'] ?></span>
+								<span class="rt-qualification-name"><i class="icon-round-check"></i><?php echo esc_html($qualification_label['qualification_name']) ?></span>
 							<?php } ?>
 
 							<?php } ?>

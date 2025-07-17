@@ -483,6 +483,89 @@
 	}
 }
 
+/*------------------- Phone Ring -------------------*/
+
+@keyframes phone-ring-anim {
+	0% {
+		transform: rotate(0) scale(1) skew(1deg)
+	}
+	10% {
+		transform: rotate(-25deg) scale(1) skew(1deg)
+	}
+	20% {
+		transform: rotate(25deg) scale(1) skew(1deg)
+	}
+	30% {
+		transform: rotate(-25deg) scale(1) skew(1deg)
+	}
+	40% {
+		transform: rotate(25deg) scale(1) skew(1deg)
+	}
+	50% {
+		transform: rotate(0) scale(1) skew(1deg)
+	}
+	100% {
+		transform: rotate(0) scale(1) skew(1deg)
+	}
+}
+
+/*------------------- Move Forward  -------------------*/
+
+@keyframes move-forward-right {
+	50% {
+		transform: translate(100%);
+	}
+	51% {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+/*------------------- Fade In Bottom Left  -------------------*/
+
+@keyframes fadeInBottomLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-100%, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translateZ(0);
+	}
+}
+
+/*------------------- Fade In Bottom Left  -------------------*/
+@keyframes pulsekm {
+	0% {
+		box-shadow: 0 0 0 0 $primary_color;
+	}
+	70% {
+		box-shadow: 0 0 0 20px $primary_color;
+		opacity: 0;
+	}
+	100% {
+		box-shadow: 0 0 0 0 $primary_color;
+		opacity: 0;
+	}
+}
+
+/*------------------- Opacity -------------------*/
+@keyframes rt-opacity {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 
 
@@ -512,22 +595,21 @@
 //	}
 //}
 //
-//.animation-scale-x {
-//	clip-path: inset(0 100% 0 0);
-//	&.animate__animated {
-//		animation: qodef-image-fade-in .8s forwards cubic-bezier(.57,.57,0,.97);
-//	}
-//}
-//
-//
-//@keyframes qodef-image-fade-in {
-//	0% {
-//		clip-path: inset(0 100% 0 0);
-//	}
-//	100% {
-//		clip-path: inset(0 0 0 0);
-//	}
-//}
+.animation-scale-x {
+	clip-path: inset(0 100% 0 0);
+	&.animate__animated {
+		animation: qodef-image-fade-in .8s forwards cubic-bezier(.57,.57,0,.97);
+	}
+}
+
+@keyframes qodef-image-fade-in {
+	0% {
+		clip-path: inset(0 100% 0 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+	}
+}
 
 
 

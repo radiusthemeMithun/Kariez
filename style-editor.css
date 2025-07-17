@@ -62,7 +62,7 @@ b, strong {
 	margin-top: 10px;
 }
 .wp-block-freeform img {
-	border-radius: 12px;
+	border-radius: 10px;
 }
 /*********** typography ***********/
 h1,
@@ -84,8 +84,8 @@ h6,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6,
 .editor-post-title__block .editor-post-title__input {
-	font-family: 'Kumbh Sans', sans-serif;
-	color: #0B0800;
+	font-family: 'Outfit', sans-serif;
+	color: #000;
 	margin: 0 0 15px 0;
 	font-weight: 700;
 }
@@ -255,7 +255,7 @@ ul.wp-block-archives ul {
 
 /************ Block image gallery ************/
 .wp-block-image img {
-	border-radius: 0;
+	border-radius: 10px;
 }
 .block-editor-block-list__layout {
 	position: relative;
@@ -271,8 +271,14 @@ figure.wp-block-gallery.has-nested-images {
 }
 figcaption,
 figure.wp-block-image figcaption {
-	border-radius: 0;
+	border-radius: 10px;
+
 }
+figcaption,
+figure.wp-block-image figcaption img {
+	border-radius: 10px;
+}
+
 /************ block cover ************/
 .wp-block-cover {
    	margin-bottom: 15px;
@@ -334,80 +340,68 @@ div[data-type="core/button"] {
 	font-size: 16px;
 }
 .wp-block-button .wp-block-button__link {
-	color: #0B0800;
+	color: #000;
 	background-color: #FFCC00;
-	text-align: center;
-	display: inline-block;
+	text-align: left;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
 	padding: 16px 30px 15px;
-	transition: all .3s ease-in-out;
 	position: relative;
-	overflow: hidden;
-	z-index: 2;
-	font-weight: 700;
-	text-transform: uppercase;
+	z-index: 1;
+	font-weight: 500;
+	text-transform: capitalize;
 	border: 0;
-	border-radius: 0;
-	font-size: 16px;
+	border-radius: 0 5px 5px 0;
+	font-size: 15px;
+	overflow: hidden;
+	transition: all .4s cubic-bezier(.42,0,.58,1);
+	transition-delay: 0s;
 }
 
 .wp-block-button .wp-block-button__link:hover {
 	color: #FFCC00;
 }
 
-.wp-block-button .wp-block-button__link:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background-color: #0B0800;
-	transform: scaleY(0.0);
-	transform-origin: center;
-	transform-style: preserve-3d;
-	transition: all 0.3s linear;
-	transform-origin: right center;
-	z-index: -1;
-}
 .wp-block-button .wp-block-button__link:before {
 	content: "";
+	width: 100%;
+	height: 100%;
+	display: block;
 	position: absolute;
 	top: 0;
+	right: auto;
+	bottom: auto;
 	left: 0;
-	bottom: 0;
-	right: 0;
-	background-color: #fff;
-	transform: scalex(0.0);
-	transform-origin: center;
-	transform-style: preserve-3d;
-	transition: all 0.3s linear;
-	transform-origin: left center;
+	background-color: #000;
+	transform: translate(calc(-100% - 2px));
+	border-radius: 30px;
+	transition: all .6s cubic-bezier(.645,.045,.355,1);
+	transition-delay: 0s;
 	z-index: -1;
 }
 .wp-block-button .wp-block-button__link:hover:before {
-	transform: scalex(1.0);
-	transform-origin: left center;
-	transition-delay: 100ms;
-}
-.wp-block-button .wp-block-button__link:hover:after {
-	transform: scaleY(1.0);
-	transform-origin: right center;
-	transition-delay: 100ms;
+	transform: translate(0);
+	transition: all .4s cubic-bezier(.42,0,.58,1);
+	transition-delay: 0s;
 }
 .wp-block-button .wp-block-button__link br {
 	display: none;
 }
 .wp-block-button.is-style-outline .wp-block-button__link {
-	color: #0B0800;
+	color: #000;
 	border: 2px solid #FFCC00;
 	background-color: transparent;
 }
 .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	color: #fff;
-	border-color: #0B0800;
+	border-color: #000;
 }
 .wp-block-button.is-style-outline .wp-block-button__link:after {
-	background-color: #0B0800;
+	background-color: #000;
 }
 .wp-block-button.is-style-outline .wp-block-button__link:before {
 	/*display: none;*/
@@ -433,7 +427,7 @@ div[data-type="core/button"] {
 .wp-block-quote {
 	background-color: transparent;
 	border: 5px solid #000000;
-	color: #0B0800;
+	color: #000;
 	margin: 30px 0;
 	padding: 45px 40px 45px 160px;
 	font-size: 18px;
@@ -457,7 +451,7 @@ div[data-type="core/button"] {
 .wp-block-quote.is-style-plain {
 	background-color: transparent;
 	border: 5px solid #000000;
-	color: #0B0800;
+	color: #000;
 	margin: 30px 0;
 	padding: 45px 40px 45px 160px;
 	position: relative;

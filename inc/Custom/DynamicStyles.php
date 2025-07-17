@@ -35,14 +35,14 @@ class DynamicStyles {
 	private function inline_style() {
 
 		$primary_color   	= kariez_option( 'rt_primary_color', '#FFCC00' );
-		$secondary_color 	= kariez_option( 'rt_secondary_color', '#FFFCF1' );
+		$secondary_color 	= kariez_option( 'rt_secondary_color', '#FFFCEE' );
 		$tertiary_color    	= kariez_option( 'rt_tertiary_color', '#ffb000' );
 		$body_bg_color   	= kariez_option( 'rt_body_bg_color', '#ffffff' );
-		$body_color      	= kariez_option( 'rt_body_color', '#707376' );
-		$border_color      	= kariez_option( 'rt_border_color', '#0B0800' );
-		$title_color     	= kariez_option( 'rt_title_color', '#0B0800' );
+		$body_color      	= kariez_option( 'rt_body_color', '#484848' );
+		$border_color      	= kariez_option( 'rt_border_color', '#B0B0B0' );
+		$title_color     	= kariez_option( 'rt_title_color', '#000000' );
 		$button_color    	= kariez_option( 'rt_button_color', '#ffffff' );
-		$button_text_color 	= kariez_option( 'rt_button_text_color', '#0B0800' );
+		$button_text_color 	= kariez_option( 'rt_button_text_color', '#000000' );
 		$meta_color      	= kariez_option( 'rt_meta_color', '#FFCC00' );
 		$meta_light      	= kariez_option( 'rt_meta_light', '#b2c2c0' );
 		$gray10          	= kariez_option( 'rt_gray10_color', '#f1f1f1' );
@@ -430,8 +430,8 @@ class DynamicStyles {
 			$typo_body           = json_decode( kariez_option( 'rt_body_typo' ), true );
 			$typo_menu           = json_decode( kariez_option( 'rt_menu_typo' ), true );
 			$typo_heading        = json_decode( kariez_option( 'rt_all_heading_typo' ), true );
-			$body_font_family    = $typo_body['font'] ?? 'DM Sans';
-			$heading_font_family = $typo_heading['font'] ?? 'Kumbh Sans';
+			$body_font_family    = $typo_body['font'] ?? 'Outfit';
+			$heading_font_family = $typo_heading['font'] ?? $body_font_family;
 			?>
 			:root{
 			--rt-body-font: '<?php echo esc_html( $typo_body['font'] ); ?>', sans-serif;

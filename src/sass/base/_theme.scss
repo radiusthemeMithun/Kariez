@@ -1,6 +1,6 @@
 .content-area {
-	padding-top: 140px;
-	padding-bottom: 140px;
+	padding-top: 120px;
+	padding-bottom: 120px;
 	@media(max-width: 1200px) {
 		padding-top: 70px;
 		padding-bottom: 70px;
@@ -39,6 +39,15 @@
 .rt-blend img {
 	filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg) !important;
 }
+
+.tertiaryColor, .kariez-offcanvas-drawer ul li.current-menu-item > a,
+.kariez-offcanvas-drawer ul li.current-menu-ancestor > a, .kariez-offcanvas-drawer nav ul li a:hover, .kariez-navigation ul.menu li.current-menu-item > a,
+.kariez-navigation ul.menu li.current > a, .kariez-navigation ul.menu > li > a:hover, .kariez-navigation ul li a:hover, .kariez-navigation ul li.current-menu-item > a,
+.kariez-navigation ul li.current-menu-ancestor > a {
+	color: $title_color;
+}
+
+
 /*scroll bar*/
 .kariez-offcanvas-drawer::-webkit-scrollbar {
 	width: 1px;

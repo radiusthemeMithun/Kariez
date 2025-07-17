@@ -46,7 +46,7 @@ class TypographyMenu extends Customizer {
 				'label'   => __( 'Menu Typography', 'kariez' ),
 				'default' => json_encode(
 					[
-						'font'          => 'Archivo',
+						'font'          => 'DM Sans',
 						'regularweight' => '600',
 						'size'          => '16',
 						'lineheight'    => '22',

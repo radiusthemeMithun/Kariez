@@ -84,7 +84,7 @@ class Fns {
 			'linkedin'      => array(
 				'label' => esc_html__( 'Linkedin', 'kariez' ),
 				'type'  => 'text',
-				'icon'  => 'icon-linked',
+				'icon'  => 'icon-linkdin',
 			),
 			'skype'         => array(
 				'label' => esc_html__( 'Skype', 'kariez' ),
@@ -99,12 +99,12 @@ class Fns {
 			'pinterest'     => array(
 				'label' => esc_html__( 'Pinterest', 'kariez' ),
 				'type'  => 'text',
-				'icon'  => 'icon-pintarest',
+				'icon'  => 'icon-pinterest',
 			),
 			'instagram'     => array(
 				'label' => esc_html__( 'Instagram', 'kariez' ),
 				'type'  => 'text',
-				'icon'  => 'icon-instragram',
+				'icon'  => 'icon-instagram',
 			),
 		) );
 

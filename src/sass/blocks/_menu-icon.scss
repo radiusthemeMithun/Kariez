@@ -19,24 +19,38 @@
 	display: flex;
 	align-items: center;
 	line-height: 1.4;
+	@media (max-width: 767px) {
+		display: none;
+	}
 	.phone-icon {
-		color: $button_color;
+		color: $title_color;
 		padding-right: 8px;
 		i {
-			height: 40px;
-			width: 40px;
-			border-radius: 50%;
+			height: 45px;
+			width: 45px;
+			border-radius: 100%;
 			background-color: $primary_color;
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
+			animation: phone-ring-anim 2.5s infinite ease-in-out;
 		}
 	}
 	.phone-label {
-		color: #6a6a6a;
-		font-size: 13px;
-		font-weight: 600;
+		color: $title_color;
+		font-size: 14px;
 		padding-right: 8px;
+		display: block;
+	}
+	.phone-number {
+		color: $title_color;
+		font-size: 20px;
+		font-weight: 700;
+		display: block;
+		transition: all .3s ease-in-out;
+		&:hover {
+			color: $primary_color;
+		}
 	}
 }
 
@@ -68,6 +82,35 @@
 		}
 		.ham-burger {
 			list-style: none;
+			&:hover {
+				.menu-bar {
+					background-color: $primary_color;
+				}
+			}
+			.menu-bar {
+				position: relative;
+				z-index: 1;
+				line-height: 100px;
+				&:hover {
+					&:before {
+						transform: scale(1);
+					}
+				}
+				&:before {
+					content: "";
+					height: 100%;
+					width: 100%;
+					background-color: $primary_color;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					transform: scale(0);
+					transition: .4s;
+					z-index: -1;
+				}
+			}
 		}
 	}
 }

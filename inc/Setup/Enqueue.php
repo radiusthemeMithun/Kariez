@@ -23,12 +23,11 @@ class Enqueue {
 
 	function register_scripts(){
 		wp_register_style( 'kariez-gfonts', $this->fonts_url(), [], Constants::get_version() );
-		wp_register_style( 'rt-magnific-popup', kariez_get_css( 'magnific-popup', true ), [], Constants::get_version() );
-		wp_register_style( 'rt-animate', kariez_get_css( 'animate', true ), [], Constants::get_version() );
-		wp_register_style( 'swiper-min', kariez_get_css( 'swiper.min', true ), [], Constants::get_version() );
-		wp_register_style( 'rt-animated-headline', kariez_get_css( 'animated-headline', true ), [], Constants::get_version() );
+		wp_register_style( 'rt-magnific-popup', kariez_get_file( '/assets/css/magnific-popup.css' ), [], Constants::get_version() );
+		wp_register_style( 'swiper-min', kariez_get_file( '/assets/css/swiper.min.css' ), [], Constants::get_version() );
+		wp_register_style( 'rt-animate', kariez_get_file('/assets/css/animate.css' ), [], Constants::get_version() );
+		wp_register_style( 'rt-multiscroll-min', kariez_get_file('/assets/css/multiscroll.min.css' ), [], Constants::get_version() );
 
-		wp_register_script( 'rt-animated-headline', kariez_get_js( 'animated-headline' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-counterup', kariez_get_js( 'counterup' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-waypoints', kariez_get_js( 'waypoints' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-parallax-scroll', kariez_get_js( 'parallax-scroll' ), [ 'jquery' ], Constants::get_version(), true );
@@ -36,10 +35,14 @@ class Enqueue {
 		wp_register_script( 'rt-appear', kariez_get_js( 'appear' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-magnific-popup', kariez_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );// magnific js
 		wp_register_script( 'rt-nice-select', kariez_get_js( 'nice-select' ), [ 'jquery' ], Constants::get_version(), true );// Isotope js
-		wp_register_script( 'rt-isotope', kariez_get_js( 'isotope.min' ), [ 'jquery' ], Constants::get_version(), true );// Swiper js
 		wp_register_script( 'rt-swiper', kariez_get_js( 'swiper.min' ), [ 'jquery' ], Constants::get_version(), true );// headRoom js
 		wp_register_script( 'rt-headroom', kariez_get_js( 'headroom' ), [ 'jquery' ], Constants::get_version(), true );// headRoom js
 		wp_register_script( 'rt-wow', kariez_get_js( 'wow.min' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-multi-scroll', kariez_get_js( 'jquery.multiscroll.min' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-ease', kariez_get_js( 'jquery.easings.min' ), [ 'jquery' ], Constants::get_version(), true );
+
+		wp_register_script( 'rt-isotope', kariez_get_js( 'isotope.min' ), [ 'jquery' ], Constants::get_version(), true );// Swiper js
+		wp_register_script( 'rt-swiper', kariez_get_js( 'swiper.min' ), [ 'jquery' ], Constants::get_version(), true );// headRoom js
 
 	}
 

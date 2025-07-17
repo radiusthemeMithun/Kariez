@@ -12,24 +12,27 @@ use RT\Kariez\Options\Opt;
 if(! Opt::$has_top_bar ) {
 	return;
 }
-$topinfo = ( kariez_option( 'rt_contact_address' ) || kariez_option( 'rt_phone' ) || kariez_option( 'rt_email' ) || kariez_option( 'rt_website' ) ) ? true : false;
+$topinfo = ( kariez_option( 'rt_contact_address' ) || kariez_option( 'rt_phone' ) || kariez_option( 'rt_email' ) || kariez_option( 'rt_open_time' ) ) ? true : false;
 $_fullwidth = Opt::$header_width == 'full' ? '-fluid' : '';
 ?>
 
 <div class="kariez-topbar">
-	<div class="topbar-container <?php echo esc_attr($_fullwidth) ?>">
+	<div class="topbar-container rt-container <?php echo esc_attr($_fullwidth) ?>">
 		<div class="topbar-row d-flex flex-wrap column-gap-30 align-items-center">
 			<?php if( $topinfo ) { ?>
 			<div class="topbar-left d-flex flex-wrap column-gap-30 align-items-center">
-				<?php if( kariez_option( 'rt_topbar_address' ) && kariez_option( 'rt_contact_address' )  ) { ?>
-					<span><i class="icon-location"></i><?php kariez_html( kariez_option( 'rt_contact_address' ) , false );?></span>
-				<?php } if( kariez_option( 'rt_topbar_phone' ) && kariez_option( 'rt_phone' ) ) { ?>
-					<span><i class="icon-phone"></i><span class="text">Call Us:</span><a href="tel:<?php echo esc_attr( kariez_option( 'rt_phone' ) );?>"><?php kariez_html( kariez_option( 'rt_phone' ) , false );?></a></span>
-				<?php } if( kariez_option( 'rt_topbar_email' ) && kariez_option( 'rt_email' ) ) { ?>
-					<span><i class="icon-e-mail"></i><a href="mailto:<?php echo esc_attr( kariez_option( 'rt_email' ) );?>"><?php kariez_html( kariez_option( 'rt_email' ) , false );?></a></span>
-				<?php } if( kariez_option( 'rt_topbar_website' ) && kariez_option( 'rt_website' ) ) { ?>
-					<span><i class="icon-global"></i><?php kariez_html( kariez_option( 'rt_website' ) , false );?></span>
-				<?php } ?>
+				<?php if( kariez_option( 'rt_topbar_open_time' ) && kariez_option( 'rt_open_time' ) ) { ?>
+					<span><i class="icon-clock"></i><?php kariez_html( kariez_option( 'rt_open_time' ) , false );?></span>
+				<?php }
+				if( kariez_option( 'rt_topbar_email' ) && kariez_option( 'rt_email' ) ) { ?>
+					<span><i class="icon-mail"></i><a href="mailto:<?php echo esc_attr( kariez_option( 'rt_email' ) );?>"><?php kariez_html( kariez_option( 'rt_email' ) , false );?></a></span>
+				<?php }
+				 if( kariez_option( 'rt_topbar_address' ) && kariez_option( 'rt_contact_address' )  ) { ?>
+					<span><i class="icon-map-pin"></i><?php kariez_html( kariez_option( 'rt_contact_address' ) , false );?></span>
+				<?php }
+				if( kariez_option( 'rt_topbar_phone' ) && kariez_option( 'rt_phone' ) ) { ?>
+					<span><i class="icon-phone"></i><?php kariez_html( kariez_option( 'rt_phone_text' ) , false );?><a href="tel:<?php echo esc_attr( kariez_option( 'rt_phone' ) );?>"><?php kariez_html( kariez_option( 'rt_phone' ) , false );?></a></span>
+				<?php }   ?>
 			</div>
 			<?php } ?>
 			<?php if( kariez_option( 'rt_topbar_social' ) ) { ?>

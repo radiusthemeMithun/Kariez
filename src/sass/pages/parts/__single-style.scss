@@ -8,13 +8,13 @@
 	.kariez-post-card {
 		.entry-header {
 			.entry-title {
-				font-size: clamp(40px, 4vw, 50px);
+				font-size: 40px;
 				line-height: 1.2;
-				margin-bottom: 24px;
+				margin-bottom: 18px;
 			}
 		}
 		.rt-post-meta {
-			margin-bottom: 24px;
+			margin-bottom: 18px;
 		}
 	}
 	.entry-footer {
@@ -107,6 +107,7 @@
 			width: 205px;
 		}
 		img {
+			border-radius: 10px;
 			@media(min-width: 1200px) {
 				height: 239px;
 				width: 205px;
@@ -118,6 +119,7 @@
 		flex: 1;
 		background-color: $primary_color;
 		padding: 25px 80px 30px 30px;
+		border-radius: 10px;
 		@media(max-width: 575px) {
 			flex: auto;
 		}
@@ -126,6 +128,7 @@
 		margin-bottom: 2px;
 		text-transform: capitalize;
 		font-size: 30px;
+		font-weight: 600;
 		a {
 			color: $title_color;
 			&:hover {
@@ -176,14 +179,16 @@
 	margin: 30px 0;
 	padding: 45px 40px 45px 160px;
 	position: relative;
+	border-radius: 20px;
 	&:after {
-		content: "\e852";
+		content: "\e808";
 		font-family: rt-fontello;
 		font-size: 50px;
 		position: absolute;
 		color: $title_color;
 		left: 70px;
 		top: 70px;
+		transform: rotate(180deg);
 	}
 
 	p {

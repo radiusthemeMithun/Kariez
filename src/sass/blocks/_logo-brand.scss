@@ -3,15 +3,11 @@
 ---------------------------------------*/
 .rt-logo-brand {
 	.logo-box {
-		//display: flex;
-		//align-items: center;
-		//justify-content: center;
-		//overflow: hidden;
 		&.gray {
 			img {
 				filter: grayscale(1);
 				transition: all ease 0.21s;
-				opacity: 0.75;
+				opacity: 0.4;
 			}
 			&:hover {
 				img {
@@ -25,7 +21,7 @@
 			img {
 				filter: brightness(0)invert(1);
 				transition: all ease 0.21s;
-				opacity: 0.4;
+				//opacity: 0.4;
 			}
 			&:hover {
 				img {
@@ -38,5 +34,23 @@
 			line-height: 1;
 		}
 
+	}
+}
+
+.rt-grid-brand-logo {
+	.rt-image-layout {
+		.rt-image {
+			a {
+				img {
+					filter: grayscale(100%);
+					transition: all ease 0.21s;
+					opacity: .5;
+					&:hover {
+						filter: grayscale(0);
+						opacity: 1;
+					}
+				}
+			}
+		}
 	}
 }

@@ -49,9 +49,9 @@ class Contact extends Customizer {
 				'label' => __( 'Email', 'kariez' ),
 			],
 
-			'rt_website' => [
+			'rt_open_time' => [
 				'type'  => 'text',
-				'label' => __( 'Website', 'kariez' ),
+				'label' => __( 'Open Time', 'kariez' ),
 			],
 
 			'rt_contact_address' => [

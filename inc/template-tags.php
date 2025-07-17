@@ -248,10 +248,12 @@ if ( ! function_exists( 'kariez_menu_icons_group' ) ) {
 			'hamburg'       => kariez_option( 'rt_header_bar' ),
 			'search'        => kariez_option( 'rt_header_search' ),
 			'login'         => kariez_option( 'rt_header_login_link' ),
-			'button'        => kariez_option( 'rt_track_order_button' ),
-			'button_label'  => kariez_option( 'rt_track_order_label' ),
-			'button_link'   => kariez_option( 'rt_track_order_button_url' ),
+			'phone' 		=> kariez_option( 'rt_header_phone' ),
+			'button'        => kariez_option( 'rt_get_started_button' ),
+			'button_label'  => kariez_option( 'rt_get_started_label' ),
+			'button_link'   => kariez_option( 'rt_get_started_button_url' ),
 			'has_separator' => kariez_option( 'rt_header_separator' )
+
 		];
 		$args         = wp_parse_args( $args, $default_args );
 		$has_button   = $args['button'] && $args['button_label'];
@@ -281,19 +283,38 @@ if ( ! function_exists( 'kariez_menu_icons_group' ) ) {
 
 				<?php if ( $args['login'] ) : ?>
 					<li class="rt-user-login rt-button">
-						<a  class="btn button-2" href="<?php echo esc_url( wp_login_url() ) ?>" aria-label="user login">
-							<?php if ( kariez_option( 'rt_get_login_label' ) ) { ?><?php echo kariez_option( 'rt_get_login_label' ) ?><?php } ?>
+						<a  class="btn button-3" href="<?php echo esc_url( wp_login_url() ) ?>" aria-label="user login">
+							<?php if ( kariez_option( 'rt_get_login_label' ) ) { ?><?php echo kariez_option( 'rt_get_login_label' ) ?>
+
+							<?php } ?>
+						</a>
+					</li>
+				<?php endif; ?>
+				<?php if ( $args['phone'] ) : ?>
+					<li class="rt-phone-2">
+						<a class="phone-box" href="tel:<?php echo esc_attr( kariez_option( 'rt_phone' ) );?>" aria-label="phone number">
+							<div class="phone-icon"><i class="icon-phone"></i></div>
+							<div class="content">
+
+								<?php if ( kariez_option( 'rt_phone_lebel' ) ) { ?><span class="phone-label"><?php echo kariez_option( 'rt_phone_lebel' ) ?></span>
+
+								<?php } ?>
+								<?php if ( kariez_option( 'rt_phone_number' ) ) { ?><span class="phone-number"><?php echo kariez_option( 'rt_phone_number' ) ?></span>
+
+								<?php } ?>
+							</div>
 						</a>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $has_button ) : ?>
 					<li class="rt-button">
-						<a class="btn button-2" href="<?php echo esc_url( $args['button_link'] ) ?>" aria-label="button link">
-							<span><i class="icon-gps"></i><?php echo esc_html( $args['button_label'] ); ?>
+						<a class="btn button-3" href="<?php echo esc_url( $args['button_link'] ) ?>" aria-label="button link">
+							<span><?php echo esc_html( $args['button_label'] ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
+
 			</ul>
 		</div>
 		<?php
@@ -520,11 +541,16 @@ if ( ! function_exists( 'kariez_get_css' ) ) {
 	 */
 	function kariez_get_css( $filename, $check_rtl = false ) {
 		$min    = WP_DEBUG ? '.css' : '.css';
-		$is_rtl = $check_rtl && is_rtl() ? 'css-rtl' : 'css';
+		$is_rtl = $check_rtl && is_rtl();
+		if ( ! empty( $_GET['dir'] ) && $_GET['dir'] == 'rtl' ) {
+			$is_rtl = true;
+		}
+		$is_rtl = $is_rtl ? 'css-rtl' : 'css';
 		$path   = "/assets/$is_rtl/" . $filename . $min;
 
 		return kariez_get_file( $path );
 	}
+
 }
 
 if ( ! function_exists( 'kariez_get_js' ) ) {
@@ -594,6 +620,8 @@ if ( ! function_exists( 'kariez_get_social_html' ) ) {
 		echo ob_get_clean();
 	}
 }
+
+
 
 if ( ! function_exists( 'kariez_site_logo' ) ) {
 	/**
@@ -693,7 +721,7 @@ if ( ! function_exists( 'kariez_scroll_top' ) ) {
 			?>
 			<a href="#" class="kariez-bc-totop ">
 				<span class="progress-wrapper"><span class="progress"></span></span>
-				<?php echo esc_attr( $class ) ?> <i class="icon-arrow-up bc-svg"></i>
+				<?php echo esc_attr( $class ) ?> <i class="icon-back-top bc-svg"></i>
             </a>
 			<?php
 		}
@@ -710,24 +738,24 @@ if ( ! function_exists( 'kariez_meta_icons' ) ) {
 	 *
 	 * @return string|void
 	 */
-//	function kariez_meta_icons( $name ) {
-//		if ( ! $name ) {
-//			return;
-//		}
-//		$icon_list = [
-//			'author'   => '<i class="icon-rt-user-1"></i>',
-//			'date'     => '<i class="icon-rt-calendar"></i>',
-//			'comment'  => '<i class="icon-rt-comments"></i>',
-//			'category' => '<i class="icon-rt-tag"></i>',
-//			'tag'      => '<i class="icon-rt-tags"></i>',
-//			'reading'  => '<i class="icon-rt-clock"></i>',
-//			'views'    => '<i class="icon-rt-eye"></i>',
-//		];
-//
-//		if ( isset( $icon_list[ $name ] ) ) {
-//			return $icon_list[ $name ];
-//		}
-//	}
+	function kariez_meta_icons( $name ) {
+		if ( ! $name ) {
+			return;
+		}
+		$icon_list = [
+			'author'   => '<i class="icon-user"></i>',
+			'date'     => '<i class="icon-calendar"></i>',
+			'comment'  => '<i class="icon-comment"></i>',
+			'category' => '<i class="icon-tag"></i>',
+			'tag'      => '<i class="icon-tag"></i>',
+			'reading'  => '<i class="icon-clock"></i>',
+			'views'    => '<i class="icon-eye"></i>',
+		];
+
+		if ( isset( $icon_list[ $name ] ) ) {
+			return $icon_list[ $name ];
+		}
+	}
 }
 
 if ( ! function_exists( 'kariez_reading_time' ) ) {
@@ -850,7 +878,7 @@ if ( ! function_exists( 'kariez_post_meta' ) ) {
 	function kariez_post_meta( $args ) {
 		$default_args = [
 			'with_list'     => true,
-//			'with_icon'     => false,
+			'with_icon'     => true,
 			'include'       => [],
 			'class'         => '',
 			'author_prefix' => __( 'By', 'kariez' )
@@ -883,7 +911,7 @@ if ( ! function_exists( 'kariez_post_meta' ) ) {
 				continue;
 			}
 			$output .= ( $args['with_list'] ) ? '<li class="' . $key . '">' : '';
-//			$output .= $args['with_icon'] ? kariez_meta_icons( $key ) : null;
+			$output .= $args['with_icon'] ? kariez_meta_icons( $key ) : null;
 			$output .= $meta;
 			$output .= ( $args['with_list'] ) ? '</li>' : '';
 		}
@@ -946,8 +974,8 @@ if ( ! function_exists( 'kariez_post_thumbnail' ) ) {
 					<?php } ?>
 				</div>
 				<div class="swiper-navigation">
-					<div class="swiper-button swiper-button-prev"><i class="icon-rt-left-arrow"></i></div>
-					<div class="swiper-button swiper-button-next"><i class="icon-rt-right-arrow"></i></div>
+					<div class="swiper-button swiper-button-prev"><i class="icon-arrow-left"></i></div>
+					<div class="swiper-button swiper-button-next"><i class="icon-arrow-right"></i></div>
 				</div>
 			</div>
 		<?php } else { ?>
@@ -1016,8 +1044,8 @@ if ( ! function_exists( 'kariez_post_single_thumbnail' ) ) {
 					<?php } ?>
 				</div>
 				<div class="swiper-navigation">
-					<div class="swiper-button swiper-button-prev"><i class="icon-rt-left-arrow"></i></div>
-					<div class="swiper-button swiper-button-next"><i class="icon-rt-right-arrow"></i></div>
+					<div class="swiper-button swiper-button-prev"><i class="icon-arrow-left"></i></div>
+					<div class="swiper-button swiper-button-next"><i class="icon-arrow-right"></i></div>
 				</div>
 			</div>
 		<?php } else { ?>
@@ -1047,9 +1075,11 @@ if ( ! function_exists( 'kariez_entry_footer' ) ) {
 		if ( ! is_single() ) {
 			if ( kariez_option( 'rt_blog_footer_visibility' ) ) { ?>
 				<footer class="entry-footer rt-button">
-					<a class="btn <?php echo esc_attr( kariez_option('rt_blog_btn_style') ); ?>"
-					   href="<?php echo esc_url( get_permalink() ) ?>" <?php if( is_numeric(kariez_option('rt_blog_btn_radius') ) ) { ?>
-						<?php } ?>><?php echo kariez_readmore_text() ?><i class="icon-rt-right-arrow"></i>
+					<a class="btn <?php echo esc_attr( kariez_option('rt_blog_btn_style') ); ?>" href="<?php the_permalink();?>">
+						<span class="button-text"><?php esc_html_e('Continue Reading' , 'kariez' ); ?></span>
+						<span class="btn-round-shape">
+							<i class="icon-arrow-right"></i>
+						</span>
 					</a>
 				</footer>
 			<?php }
@@ -1099,7 +1129,10 @@ if ( ! function_exists( 'kariez_post_single_video' ) ) {
 			<?php if ( ( function_exists( 'get_post_format' ) && 'video' == get_post_format( get_the_ID() ) )  ) { ?>
 				<div class="entry-video-area embed-responsive-16by9">
 					<div class="embed-responsive">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo esc_attr( $youtube_id ); ?>" allowfullscreen></iframe>
+						<div class="video-container">
+							<object data="https://www.youtube.com/embed/<?php echo esc_attr( $youtube_id ); ?>"
+									type="text/html" width="560" height="315"></object>
+						</div>
 					</div>
 				</div>
 			<?php } ?>
@@ -1162,10 +1195,10 @@ if ( ! function_exists( 'kariez_entry_profile' ) ) {
 							<?php if ( ! empty( $prof_fb ) ){ ?><li><a href="<?php echo esc_attr( $prof_fb ); ?>"><i class="icon-facebook"></i></a></li><?php } ?>
 							<?php if ( ! empty( $prof_tw ) ){ ?><li><a href="<?php echo esc_attr( $prof_tw ); ?>"><i class="icon-twitter"></i></a></li><?php } ?>
 							<?php if ( ! empty( $prof_lk ) ){ ?><li><a href="<?php echo esc_attr( $prof_lk ); ?>"><i class="icon-linked"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_vim ) ){ ?><li><a href="<?php echo esc_attr( $prof_vim ); ?>"><i class="icon-vine"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_you ) ){ ?><li><a href="<?php echo esc_attr( $prof_you ); ?>"><i class="icon-youtube-2"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_ins ) ){ ?><li><a href="<?php echo esc_attr( $prof_ins ); ?>"><i class="icon-instragram"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_pin ) ){ ?><li><a href="<?php echo esc_attr( $prof_pin ); ?>"><i class="icon-pintarest-1"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_vim ) ){ ?><li><a href="<?php echo esc_attr( $prof_vim ); ?>"><i class="icon-vimeo"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_you ) ){ ?><li><a href="<?php echo esc_attr( $prof_you ); ?>"><i class="icon-youtube"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_ins ) ){ ?><li><a href="<?php echo esc_attr( $prof_ins ); ?>"><i class="icon-instagram"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_pin ) ){ ?><li><a href="<?php echo esc_attr( $prof_pin ); ?>"><i class="icon-pinterest"></i></a></li><?php } ?>
 							<?php if ( ! empty( $prof_wht ) ){ ?><li><a href="<?php echo esc_attr( $prof_wht ); ?>"><i class="icon-whatsapp"></i></a></li><?php } ?>
 						</ul>
 					</div>

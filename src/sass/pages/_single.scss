@@ -30,7 +30,7 @@
 }
 .entry-content {
 	img {
-		border-radius: 0;
+		border-radius: 10px;
 	}
 }
 .entry-video-area {
@@ -54,8 +54,9 @@
 .rt-related-post {
 	margin-top: 60px;
 	.related-title {
-		font-size: 50px;
+		font-size: 40px;
 		margin-bottom: 36px;
+		font-weight: 600;
 	}
 	.rt-post-meta {
 		margin-bottom: 0 !important;

@@ -75,7 +75,7 @@ $rt_project_rating = 5- intval( $ratting );
 				<?php if ( has_post_thumbnail() ) { ?>
 					<div class="post-thumbnail-wrap single-post-thumbnail">
 						<figure class="post-thumbnail">
-							<?php the_post_thumbnail( 'full' ); ?>
+							<?php the_post_thumbnail('kariez-size3'); ?>
 						</figure><!-- .post-thumbnail -->
 					</div>
 				<?php } ?>

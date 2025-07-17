@@ -264,15 +264,13 @@ ol.wp-block-latest-comments li:last-child {
 	ul li {
 		//display: flex;
 		//align-items: flex-start;
-
-
 		&.phone-no {
 			.phone-box {
 				gap: 10px;
 				display: flex;
 				.phone-icon {
-					height: 35px;
-					width: 35px;
+					height: 50px;
+					width: 50px;
 					background-color: $primary_color;
 					display: inline-flex;
 					align-items: center;
@@ -282,8 +280,8 @@ ol.wp-block-latest-comments li:last-child {
 					position: relative;
 					&::before {
 						content: "";
-						height: 45px;
-						width: 45px;
+						height: 60px;
+						width: 60px;
 						background-color: rgba(255, 204, 0, 1);
 						border-radius: 50%;
 						position: absolute;
@@ -292,12 +290,11 @@ ol.wp-block-latest-comments li:last-child {
 						transform: translateY(-50%) translateX(-50%);
 						animation: pulse-border 2000ms ease-out infinite;
 						z-index: -1;
-
 					}
 					&::after {
 						content: "";
-						height: 55px;
-						width: 55px;
+						height: 70px;
+						width: 70px;
 						background-color: rgba(255, 204, 0, 1);
 						border-radius: 50%;
 						position: absolute;
@@ -306,7 +303,6 @@ ol.wp-block-latest-comments li:last-child {
 						transform: translateY(-50%) translateX(-50%);
 						animation: pulse-border 2000ms ease-out infinite;
 						z-index: -2;
-
 					}
 					i {
 						color: $title_color;

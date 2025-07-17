@@ -28,7 +28,10 @@ get_header();
 
 				<div class="rt-button">
 					<a class="btn button-3" href="<?php echo esc_url( home_url() ) ?>">
-						<?php kariez_html( kariez_option( 'rt_error_button_text' ), 'allow_title' ); ?>
+						<span class="button-text"><?php kariez_html( kariez_option( 'rt_error_button_text' ), 'allow_title' ); ?></span>
+						<span class="btn-round-shape">
+							<i class="icon-arrow-right"></i>
+						</span>
 					</a>
 				</div>
 

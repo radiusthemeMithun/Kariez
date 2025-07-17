@@ -1,0 +1,114 @@
+.page-id-12584 footer {
+	display: none;
+}
+/*-------------------------------------
+#. EL: MultiScroll Page
+---------------------------------------*/
+.multiscroll-wrapper {
+	position: relative;
+	height: 100vh;
+}
+@media only screen and (max-width: 991px) {
+	.multiscroll-wrapper {
+		margin-top: -32px;
+	}
+}
+.multiscroll-wrapper .ms-section {
+	background-color: $title_color;
+
+}
+/*main content*/
+.multiscroll-wrapper .ms-content {
+	padding-left: 120px;
+	padding-right: 15%;
+}
+@media (max-width: 1666px) {
+	.multiscroll-wrapper .ms-content {
+		padding-left: 30px;
+		padding-right: 5%;
+	}
+}
+@media (max-width: 1366px) {
+	.multiscroll-wrapper .ms-content {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}
+
+
+/*right nav*/
+div#multiscroll-nav.right {
+	right: 50px;
+	left: auto;
+	z-index: 33;
+}
+div#multiscroll-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+div#multiscroll-nav li {
+	width: 14px;
+	height: 14px;
+	margin: 0;
+	margin-bottom: 15px;
+}
+div#multiscroll-nav li a {
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+}
+div#multiscroll-nav li a span {
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #fff;
+	background: #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	transition: all 0.4s ease;
+}
+div#multiscroll-nav li a.active span {
+	background: #ffffff;
+	width: 20px;
+	height: 20px;
+	top: -5px;
+	left: -5px;
+}
+@media only screen and (max-width: 991px) {
+	div#multiscroll-nav.right {
+		right: 15px;
+	}
+}
+.ms-right {
+	.ms-section {
+		.ms-tableCell {
+			.full {
+				height: 100%;
+				img {
+					height: 100%;
+					object-fit: cover;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.multiscroll-wrapper .ms-left {
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.multiscroll-wrapper .ms-right {
+		display: none;
+	}
+}

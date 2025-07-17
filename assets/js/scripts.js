@@ -20,29 +20,160 @@
             Kariez.menuDrawerOpen(offCanvas);
             Kariez.offcanvasMenuToggle(offCanvas);
             Kariez.headerSearchOpen();
-            Kariez.backToTop();
+            Kariez.backTopTopScroll();
             Kariez.counterUp();
-            Kariez.pricingTab();
             Kariez.preLoader();
             Kariez.menuOffset();
-            Kariez.AjaxSearch();
             Kariez.headRoom();
             Kariez.wow();
             Kariez.rtElementorParallax();
-            Kariez.rtAnimatedHeadline();
             Kariez.magnificPopup();
             Kariez.imageFunction();
             Kariez.hasAnimation();
             Kariez.rtMasonary();
-            Kariez.rtIsotope();
+			Kariez.rtIsotope();
             Kariez.swiperSlider($);
             Kariez.horizontalSwiperSlider();
             Kariez.heroSlider();
 			Kariez.ProgressBar();
 			Kariez.rtOpenTabs();
 			Kariez.mousemove_team_hover_effect();
-			Kariez.SwiperActive();
+			Kariez.CustomCursor();
+			Kariez.ServiceActive();
+			Kariez.MultiScroll()
         },
+
+
+		MultiScroll: function () {
+			if ($.fn.multiscroll !== undefined) {
+				$('#multiscroll').multiscroll({
+					anchors: ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15'],
+					menu: '#msmenu',
+					verticalCentered: true,
+					navigation: true,
+					navigationPosition: 'right',
+					css3: true,
+					responsiveWidth: 768,
+					responsiveExpand: true,
+					scrollingSpeed: 700,
+					keyboardScrolling: true,
+					loopBottom: true,
+					loopTop: true,
+					easing: "easeInQuart",
+					onLeave: function (index, nextIndex, direction) {
+					},
+					afterLoad: function (anchorLink, index) {
+					},
+					afterRender: function () {
+					}
+				});
+			}
+		},
+
+
+		CustomCursor: function() {
+			let clientX = -100;
+			let clientY = -100;
+			let lastX = -100;
+			let lastY = -100;
+			const cursor = document.querySelector('.cursor')
+
+			const sections = document.querySelectorAll('.custom-cursor-swiper .swiper-wrapper'); // Common class for all Swiper sections
+
+			if (!cursor || sections.length === 0) return;
+
+			// const section = document.querySelector('.rt-testimonial-slider .swiper-wrapper');
+			// const links = document.querySelectorAll('.rt-testimonial-slider .swiper-slide a');
+
+			sections.forEach(section => {
+				const links = section.querySelectorAll('.swiper-slide a');
+
+				section.addEventListener('mouseenter', () => {
+					cursor.classList.add('visible')
+				})
+
+				section.addEventListener('mouseleave', () => {
+					cursor.classList.remove('visible')
+				})
+
+				links.forEach(link => {
+					link.addEventListener('mouseenter', () => {
+						cursor.classList.remove('visible');
+					});
+
+					link.addEventListener('mouseleave', () => {
+						cursor.classList.add('visible');
+					});
+				});
+
+			});
+
+			// function for linear interpolation of values
+			const lerp = (a, b, n) => {
+				return (1 - n) * a + n * b;
+			};
+
+			const initCursor = () => {
+				if (!cursor) return
+
+				// add listener to track the current mouse position
+				document.addEventListener('mousemove', e => {
+					clientX = e.clientX;
+					clientY = e.clientY;
+				});
+
+				// transform the cursor to the current mouse position
+				// use requestAnimationFrame() for smooth performance
+				const render = () => {
+					// lesser delta, greater the delay that the custom cursor follows the real cursor
+					const delta = 0.1;
+					lastX = lerp(lastX, clientX, delta);
+					lastY = lerp(lastY, clientY, delta);
+
+					cursor.style.transform = `translate(${lastX}px, ${lastY}px)`;
+
+					requestAnimationFrame(render);
+				};
+				requestAnimationFrame(render);
+			};
+
+			initCursor();
+		},
+
+
+		ServiceActive: function () {
+	var service_active = function() {
+		$('.creative-service-style-01 .service-img-box:first-child').addClass('service-img-active')
+		var $teams = $('.creative-service-style-01 .service-items');
+
+		if ($teams.length <= 0) {
+			return;
+		}
+
+		$teams.each(function() {
+			var blockHover = $(this);
+			blockHover.children('.service-item').hover(function() {
+				blockHover.find('.service-item').removeClass('item-active');
+				$(this).addClass('item-active');
+				var id = $(this).data('tab');
+				$(this).parents('.creative-service-style-01').find('.service-img-box').removeClass('service-img-active');
+				$('#'+id).addClass("service-img-active");
+			});
+		});
+	};
+
+	$(document).ready(function() {
+		service_active();
+	});
+
+	$(window).on('elementor/frontend/init', function() {
+		elementorFrontend.hooks.addAction('frontend/element_ready/rt_creative-service.default', service_active);
+	});
+},
+
+
+
+
 
 		rtElementorParallax: function () {
 			if ($(".rt-parallax-bg-yes").length) {
@@ -56,16 +187,6 @@
 			}
 		},
 
-		rtAnimatedHeadline: function () {
-			if ($(".rt-animated-headline").length) {
-				$('.rt-animated-headline').animatedHeadline({
-					animationType: 'clip'
-				});
-			}
-			$(window).on('load', function (){
-				$('.ah-words-wrapper p:first-child').addClass('is-visible');
-			});
-		},
 
         magnificPopup: function (){
             var yPopup = $(".popup-youtube");
@@ -124,6 +245,8 @@
 		},
 
 
+
+
 		// Team Hover
 		mousemove_team_hover_effect: function () {
 		if (jQuery( window ).width() > 0 ) {
@@ -144,101 +267,6 @@
 		}
 	},
 
-		SwiperActive: function(){
-			$('.swiper-button').click(function(){
-				$('.swiper-button').removeClass("active");
-				$(this).addClass("active");
-			});
-		},
-
-
-		// Ajax search 1
-        AjaxSearch: function () {
-			if ($(".rt-hero-section-search").length) {
-				$(".rt-hero-section-search").focusin(function () {
-					$('body').addClass('rt-search-active');
-					$(this).css('z-index', '100')
-				});
-				$(".rt-hero-section-search").focusout(function () {
-					$('body').removeClass('rt-search-active');
-					$(this).attr('style', '')
-				});
-			}
-			//nice-select
-			if ($(".rt-search-box-form").length) {
-				$('select').niceSelect();
-			}
-			// Search ajax
-			if ($("#rt_datafetch").length) {
-				$('#searchInput').on('keyup', function () {
-					fetchResults();
-				});
-				$(document).on('kariez_search_input_change', function () {
-					fetchResults();
-					$('#searchInput').focus();
-				});
-				function fetchResults() {
-					var keyword = $('#searchInput').val();
-					var meta = $('#categories').val();
-					var searchkey = $('.rt-addon-search .keyword a').val();
-					var searchTerm = $('#searchInput').val();
-					$('#cleanText').on('click', function () {
-						$('#searchInput').val('');
-						$('.rt-search-box-container').removeClass('rt-search-container');
-					});
-					if (searchTerm.length > 0) {
-						$('.rt-search-box-container').addClass('rt-search-container');
-
-					} else {
-						$('.rt-search-box-container').removeClass('rt-search-container');
-					}
-
-					if (keyword.length < 3) {
-						$('#rt_datafetch').html("<span class='letters'>Minimum 3 Latters</span>");
-						return;
-					}
-					$.ajax({
-						url: kariezObj.ajaxURL,
-						type: 'post',
-						data: {
-							action: 'rt_data_fetch',
-							security: kariezObj.kariezNonce,
-							keyword: keyword,
-							meta: meta,
-							searchkey: searchkey,
-						},
-						success: function (data) {
-							$('#rt_datafetch').html(data);
-						}
-					});
-				}
-				//Search Keyword
-				$(".rt-addon-search .keyword").on("click", function () {
-					var keyword = $(this).text();
-					$('.rt-input-wrap #searchInput').val(keyword);
-					$(document).trigger('kariez_search_input_change');
-				});
-
-			}
-
-			$('form.rt-search-box-form').on('submit', function (e){
-				e.preventDefault();
-				var $form = $(this);
-				var catLink = $form.find('select[name=categories]').val();
-				var searchValue = $form.find('input.search-box-input').val();
-				if(catLink) {
-					var newUrl = new URL(catLink);
-					if(searchValue){
-						newUrl.searchParams.set('s', searchValue);
-					}
-					window.location = newUrl.toString();
-				}else{
-					if(searchValue){
-						$form[0].submit();
-					}
-				}
-			})
-        },
 
 		menuOffset: function () {
             $(".dropdown-menu > li").each(function () {
@@ -313,6 +341,7 @@
 			}
 		},
 
+
         menuDrawerOpen: function (offCanvas) {
             offCanvas.menuBar.on('click', e => {
                 e.preventDefault();
@@ -356,14 +385,6 @@
 					$(this).removeClass("open");
 				}
 			});
-        },
-
-        backToTop: function () {
-            /* Scroll to top */
-            $('.scrollToTop').on('click', function () {
-                $('html, body').animate({scrollTop: 0}, 800);
-                return false;
-            });
         },
 
 
@@ -412,18 +433,6 @@
 			}
 		},
 
-  		/* Pricing Switch */
-		pricingTab: function () {
-			$(".pricing-switch-container").on("click", function () {
-				let $this = $(this);
-				let $wrapper = $this.closest('.rt-pricing-tab');
-				$wrapper.find(".pricing-switch")
-					.parents(".price-switch-box")
-					.toggleClass("price-switch-box--active");
-				$wrapper.find(".pricing-switch").toggleClass("pricing-switch-active");
-				$wrapper.find(".price-box").toggleClass("price-box-show price-box-hide");
-			});
-		},
 
 		/* preloader */
 		preLoader: function () {
@@ -560,6 +569,7 @@
 					spaceBetween: settings['spaceBetween'],
 					centeredSlides: settings['centeredSlides'],
 					slidesPerGroup: settings['slidesPerGroup'],
+					rtl: true,
 					pagination: {
 						el: $pagination,
 						clickable: true,
@@ -576,6 +586,9 @@
 					breakpoints: {
 						0: {
 							slidesPerView: settings['breakpoints']['0']['slidesPerView'],
+						},
+						320: {
+							slidesPerView: settings['breakpoints']['320']['slidesPerView'],
 						},
 						425: {
 							slidesPerView: settings['breakpoints']['425']['slidesPerView'],
@@ -615,8 +628,7 @@
 					var autoplayconditon = settings['auto'];
 					thumb_slider = new Swiper(target_thumb_slider[0],
 						{
-							// autoplay: autoplayconditon ? { delay:settings['autoplay']['delay'] } : false,
-							autoplay: autoplayCondition ? { delay: settings['autoplay']?.['delay'] || 3000 } : false,
+							autoplay: autoplayconditon ? { delay:settings['autoplay']['delay'] } : false,
 							speed: settings['speed'],
 							loop: settings['loop'],
 							pauseOnMouseEnter: true,
@@ -624,6 +636,7 @@
 							spaceBetween: settings['spaceBetween'],
 							centeredSlides: settings['centeredSlides'],
 							slidesPerGroup: settings['slidesPerGroup'],
+							rtl: true,
 							pagination: {
 								el: $pagination,
 								clickable: true,
@@ -668,12 +681,19 @@
 						speed: settings['speed'],
 						loop: settings['loop'],
 						effect: settings && settings['effect'],
+						rtl: true,
+						// effect: 'fade',
+
 						thumbs: {
 							swiper: thumb_slider,
 						},
 						navigation: {
 							nextEl: $next,
 							prevEl: $prev,
+						},
+						pagination: {
+							el: $pagination,
+							clickable: true,
 						},
 					});
 				}
@@ -699,20 +719,12 @@
 					spaceBetween: settings['spaceBetween'],
 					centeredSlides: settings['centeredSlides'],
 					slidesPerGroup: settings['slidesPerGroup'],
+					rtl: true,
 					pagination: {
 						el: $pagination,
 						clickable: true,
 						renderBullet: function (index, className) {
 							return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
-						},
-					},
-					creativeEffect: {
-						prev: {
-							shadow: true,
-							translate: [0, 0, -400],
-						},
-						next: {
-							translate: ["100%", 0, 0],
 						},
 					},
 					navigation: {
@@ -761,13 +773,11 @@
         if (elementorFrontend.isEditMode()) {
             //For all widgets
             elementorFrontend.hooks.addAction('frontend/element_ready/widget', () => {
-                Kariez.AjaxSearch();
                 Kariez.rtElementorParallax();
-				Kariez.rtAnimatedHeadline();
                 Kariez.magnificPopup();
+				Kariez.backTopTopScroll();
 				Kariez.hasAnimation();
 				Kariez.counterUp();
-				Kariez.pricingTab();
 				Kariez.imageFunction();
 				Kariez.rtMasonary();
 				Kariez.rtIsotope();
@@ -777,7 +787,9 @@
 				Kariez.ProgressBar();
 				Kariez.rtOpenTabs();
 				Kariez.mousemove_team_hover_effect();
-				Kariez.SwiperActive();
+				Kariez.CustomCursor();
+				Kariez.ServiceActive();
+				Kariez.MultiScroll()
             });
 
         }

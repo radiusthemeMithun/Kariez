@@ -15,9 +15,10 @@
 		position: relative;
 		margin: 0 4px 4px 0;
 		line-height: 1;
+		border-radius: 5px;
 		&:hover {
-			background: $primary_color;
-			color: $button_color;
+			background: $title_color;
+			color: $primary_color;
 		}
 	}
 

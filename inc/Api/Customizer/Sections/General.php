@@ -77,11 +77,11 @@ class General extends Customizer {
 			'container_width' => [
 				'type'    => 'select',
 				'label'   => __( 'Container Width', 'kariez' ),
-				'default' => '1296',
+				'default' => '1320',
 				'choices' => [
 					'1554' => esc_html__( '1554px', 'kariez' ),
 					'1364' => esc_html__( '1364px', 'kariez' ),
-					'1296' => esc_html__( '1296px', 'kariez' ),
+					'1320' => esc_html__( '1320px', 'kariez' ),
 					'1200' => esc_html__( '1200px', 'kariez' ),
 					'1140' => esc_html__( '1140px', 'kariez' ),
 				]

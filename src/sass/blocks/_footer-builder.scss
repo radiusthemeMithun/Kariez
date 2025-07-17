@@ -1,7 +1,8 @@
 
 
 
- Footer builder
+ //Footer builder
+
 .elementor-widget-rt-site-logo {
 	.site-branding {
 		.rt-mobile-logo, .rt-site-logo {
@@ -19,13 +20,27 @@
 		}
 	}
 }
+
 .kariez-footer-builder {
 	.kariez-navigation {
 		ul {
 			li {
 				margin-right: 0;
+				position: relative;
+				&:after {
+					background-color: $border_color;
+					position: absolute;
+					content: "";
+					top: 18px;
+					left: 0;
+					height: 5px;
+					width: 5px;
+					border-radius: 100%;
+
+				}
 				a {
 					position: relative;
+					margin-left: 15px;
 					&:hover {
 						&:before {
 							transform: scale3d(1, 1, 1);
@@ -37,7 +52,7 @@
 						content: "";
 						height: 1px;
 						width: 100%;
-						background-color: $title_color;
+						background-color: $primary_color;
 						bottom: 10px;
 						position: absolute;
 						transform: scale3d(0, 1, 1);
@@ -50,5 +65,43 @@
 		}
 	}
 }
+
+ .rt-copyright-menu {
+	 .kariez-navbar {
+		 li {
+			 &:after {
+				 display: none;
+			 }
+			 &:last-child {
+				 a {
+					 &:after {
+						 display: none;
+					 }
+				 }
+			 }
+			 &:not(:last-child) {
+				 margin-right: 30px;
+			 }
+			 a {
+				 position: relative;
+				 font-weight: 500 !important;
+				 margin-left: 0 !important;
+				 &:after {
+					 content: "";
+					 height: 20px;
+					 width: 1.5px;
+					 background-color: #8B8B8B;
+					 position: absolute;
+					 top: 2px;
+					 transform: rotate(15deg);
+					 right: -20px;
+				 }
+				 &:before {
+					 display: none;
+				 }
+			 }
+		 }
+	 }
+ }
 
 

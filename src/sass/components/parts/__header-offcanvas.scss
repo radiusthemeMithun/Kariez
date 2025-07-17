@@ -73,7 +73,7 @@
 		align-items: center;
 		background-color: $title_color;
 		svg {
-			fill: $white_color;
+			color: $white_color;
 		}
 	}
 	ul > li {
@@ -182,28 +182,14 @@
 			color: $meta_color;
 			overflow: hidden;
 			position: relative;
-			&::after {
-				content: "";
-				transform: scale(0);
-				background-color: $primary_color;
-				position: absolute;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				z-index: -1;
-				transition: 0.4s;
-				border-radius: 100%;
-			}
 			svg {
 				fill: $title_color;
 				width: 15px;
 				height: 15px;
 			}
 			&:hover {
-				&::after {
-					transform: scale(.9);
-				}
+				background-color: $primary_color;
+				border-color: $primary_color;
 				svg {
 					fill: $title_color;
 				}

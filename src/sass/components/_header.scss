@@ -27,7 +27,6 @@ $dropdown_top_bottom_margin: 10px;
 .main-header-section {
 	border-bottom: 1px solid rgba($black_color, 0.1);
 	//background-color: rgba(13, 11, 18, .4);
-	padding: 0 60px;
 }
 
 .site-branding {
@@ -84,7 +83,7 @@ $dropdown_top_bottom_margin: 10px;
 	}
 
 	a:hover svg {
-		fill: $primary_color;
+		color: $primary_color;
 	}
 
 	ul {
@@ -96,19 +95,17 @@ $dropdown_top_bottom_margin: 10px;
 		}
 	}
 	.menu-search-bar {
-		font-size: 20px;
-		height: 50px;
-		width: 50px;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		background-color: transparent;
-		border: 1px solid $title_color;
+		font-size: 18px;
 		position: relative;
 		z-index: 1;
+		height: 45px;
+		width: 45px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
 		&:hover {
 			&::after {
-				transform: scale(.9);
+				transform: scale(1);
 			}
 			i {
 				color: $title_color;
@@ -124,6 +121,7 @@ $dropdown_top_bottom_margin: 10px;
 			bottom: 0;
 			right: 0;
 			z-index: -1;
+			border-radius: 50%;
 			transition: 0.4s;
 		}
 		i {
@@ -154,6 +152,16 @@ $dropdown_top_bottom_margin: 10px;
 	.has-button li:nth-last-child(1)::after,
 	.has-button li:nth-last-child(2)::after {
 		content: none;
+	}
+	.rt-button {
+		@media(max-width: 767px) {
+			display: none;
+		}
+		.btn {
+			padding: 13px 20px;
+			height: 50px;
+			width: 160px;
+		}
 	}
 }
 

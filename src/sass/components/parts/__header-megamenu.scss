@@ -47,10 +47,10 @@
 	ul li > ul.dropdown-menu {
 		transform-origin: top center;
 		transform: scaleY(0) translateZ(100px);
-		transition: opacity 500ms ease, visibility 500ms ease, transform 700ms ease;
+		transition: opacity 200ms ease, visibility 200ms ease, transform 500ms ease;
 		pointer-events: none;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 
 	ul > li:hover > ul.dropdown-menu {
@@ -80,6 +80,7 @@
 		width: 780px !important;
 	}
 
+
 	/*end mega menu three column*/
 	ul li.mega-menu {
 		> ul.dropdown-menu {
@@ -98,19 +99,46 @@
 					border-top: none;
 					padding: 0;
 				}
+				.sub-menu {
+					li {
+						padding: 0;
+					}
+				}
 				> a {
-					font-weight: 800;
-					font-size: 16px;
+					font-weight: 600 !important;
+					font-size: 19px;
 					margin-bottom: 10px;
-					padding-left: 24px;
-					border-bottom: 1px dashed $border_color;
+					padding-left: 15px;
+					//border-bottom: 1px solid $title_color;
+					position: relative;
+					text-transform: uppercase;
+					color: $title_color;
 					&:before {
+						content: "";
+						height: 2px;
+						width: 10px;
+						background-color: $title_color;
+						position: absolute;
+						top: 10px;
+						left: 0;
+						visibility: visible;
+						opacity: 1;
+					}
+					&:hover {
+						margin-left: 0;
+					}
+					&:after {
 						display: none;
 					}
 				}
 			}
 		}
 
+	}
+
+	ul li.mega-menu .dropdown-menu .dropdown-submenu:hover .dropdown-toggle  {
+		color: $title_color;
+		margin-left: 0;
 	}
 
 	ul li.mega-menu.hide-header > ul.dropdown-menu > li > a {
@@ -122,11 +150,12 @@
 	}
 
 	ul li.mega-menu.mega-menu-col-2 > ul {
-		width: 45%;
+		width: 50%;
 	}
 
 	ul li.mega-menu.mega-menu-col-3 > ul {
 		width: 65%;
+
 	}
 }
 

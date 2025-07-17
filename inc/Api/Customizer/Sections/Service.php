@@ -52,7 +52,7 @@ class Service extends Customizer {
 				'label'       => __( 'Service Layout', 'kariez' ),
 				'description' => __( 'This service 02 layout only icon show', 'kariez' ),
 				'default'     => 'default',
-				'choices'     => [
+			'choices'     => [
 					'default' => __( 'Service 01', 'kariez' ),
 					'2'    => __( 'Service 02', 'kariez' ),
 				]

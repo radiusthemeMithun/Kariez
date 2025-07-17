@@ -46,7 +46,7 @@ class TypographyBody extends Customizer {
 				'label'   => __( 'Body Typography', 'kariez' ),
 				'default' => json_encode(
 					[
-						'font'          => 'Archivo',
+						'font'          => 'DM Sans',
 						'regularweight' => '500',
 						'size'          => '16',
 						'lineheight'    => '28',

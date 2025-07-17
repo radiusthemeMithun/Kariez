@@ -5,51 +5,19 @@
 		display: block;
 	}
 }
+.rt-service-sidebar.widget_block.widget_media_image {
+	.wp-block-image {
+		margin: 0 !important;
+	}
+}
 .rt-service-sidebar, .service-sidebar-menu, .service-sidebar-menu2 {
-	border: 1px solid $title_color;
+	border: 1px solid #E5E5E5;
+	border-radius: 10px;
 	width: 100%;
 	max-width: 100%;
 	margin-bottom: 30px;
 	padding: 33px;
 	ul.menu,
-	.kariez-navbar {
-		li {
-			padding-bottom: 15px;
-			border-bottom: 1px solid #D9D9D9;
-			margin-bottom: 15px;
-			&:last-child {
-				padding-bottom: 0;
-				margin-bottom: 0;
-				border-bottom: 0;
-			}
-			a {
-				position: relative;
-				display: block;
-				font-size: 18px;
-				font-weight: 500;
-				line-height: 22px;
-				z-index: 1;
-				padding-left: 0;
-				&:after {
-					position: absolute;
-					right: 24px;
-					font-size: 15px;
-					font-weight: 500;
-					content: "\e859";
-					font-family: "rt-fontello";
-				}
-				&:before {
-					display: none;
-				}
-				&:hover {
-					color: $title_color;
-					&:after {
-						color: $title_color;
-					}
-				}
-			}
-		}
-	}
 	.frm-fluent-form {
 		.ff-el-input--label {
 			display: none;
@@ -80,3 +48,12 @@
 		}
 	}
 }
+
+.kariez-widget-area .rt-service-sidebar.widget_nav_menu ul>li.current-menu-item {
+	border-bottom: 1px solid $title_color;
+}
+.kariez-widget-area .rt-service-sidebar.widget_nav_menu ul>li.current-menu-item a {
+	color: $primary_color;
+}
+
+

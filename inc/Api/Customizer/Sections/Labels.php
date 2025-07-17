@@ -56,12 +56,33 @@ class Labels extends Customizer {
 				'description' => __( 'Content: SignIn Button', 'kariez' ),
 			],
 
-			'rt_track_order_label' => [
+			'rt_phone_lebel' => [
 				'type'        => 'text',
-				'label'       => __( 'Track Ordered', 'kariez' ),
-				'default'     => __( 'Track Ordered', 'kariez' ),
-				'description' => __( 'Content: Track Ordered', 'kariez' ),
-				'condition' => [ 'rt_track_order_button' ],
+				'label'       => __( 'Have Any Questions?', 'kariez' ),
+				'default'     => __( 'Have Any Questions?', 'kariez' ),
+				'description' => __( 'Content: Have Any Questions?', 'kariez' ),
+			],
+			'rt_phone_text' => [
+				'type'        => 'text',
+				'label'       => __( 'Call Us', 'kariez' ),
+				'default'     => __( 'Call Us', 'kariez' ),
+				'description' => __( 'Content: Call Us', 'kariez' ),
+			],
+
+			'rt_phone_number' => [
+				'type'        => 'text',
+				'label'       => __( 'Phone Number', 'kariez' ),
+				'default'     => __( '+456 775 4566', 'kariez' ),
+				'description' => __( 'Content: +456 775 4566', 'kariez' ),
+			],
+
+
+			'rt_get_started_label' => [
+				'type'        => 'text',
+				'label'       => __( 'Get Started', 'kariez' ),
+				'default'     => __( 'Get Started', 'kariez' ),
+				'description' => __( 'Content: Get Started', 'kariez' ),
+				'condition' => [ 'rt_get_started_button' ],
 			],
 
 			'rt_contact_info_label' => [

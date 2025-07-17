@@ -3,7 +3,7 @@
         <key name="kariez">
             <key name="rt_phone" />
             <key name="rt_email" />
-            <key name="rt_website" />
+            <key name="rt_open_time" />
             <key name="rt_contact_address" />
             <key name="rt_get_login_label" />
             <key name="rt_get_started_label" />
@@ -12,6 +12,9 @@
             <key name="rt_about_label" />
             <key name="rt_about_text" />
             <key name="rt_footer_labels" />
+			<key name="rt_get_menu_label" />
+			<key name="rt_phone_lebel" />
+			<key name="rt_phone_number" />
             <key name="rt_ready_label" />
             <key name="rt_contact_button_text" />
             <key name="rt_blog_labels" />
@@ -23,6 +26,7 @@
             <key name="rt_error_text" />
             <key name="rt_error_button_text" />
             <key name="rt_footer_copyright" />
+			<key name="rt_post_banner_single_title" />
             <key name="rt_post_related_title" />
             <key name="rt_team_banner_archive_title" />
             <key name="rt_team_banner_single_title" />
@@ -52,22 +56,25 @@
         <taxonomy translate="1">rt-project-category</taxonomy>
     </taxonomies>
 	<custom-fields>
-       <custom-field action="translate">rt_team_info_title</custom-field>
-       <custom-field action="translate">rt_team_designation</custom-field>
-       <custom-field action="translate">rt_team_phone</custom-field>
-       <custom-field action="translate">rt_team_website</custom-field>
-       <custom-field action="translate">rt_team_email</custom-field>
-       <custom-field action="translate">rt_team_address</custom-field>
-       <custom-field action="translate">rt_team_skill_title</custom-field>
-       <custom-field action="translate">rt_team_skill_info</custom-field>
-       <custom-field action="translate">skill_name</custom-field>
-       <custom-field action="translate">skill_value</custom-field>
+	   <custom-field action="translate">rt_team_info_title</custom-field>
+	   <custom-field action="translate">rt_team_designation</custom-field>
+	   <custom-field action="translate">rt_team_phone</custom-field>
+	   <custom-field action="translate">rt_team_website</custom-field>
+	   <custom-field action="translate">rt_team_email</custom-field>
+	   <custom-field action="translate">rt_team_address</custom-field>
+	   <custom-field action="translate">rt_team_skill_title</custom-field>
+	   <custom-field action="translate">rt_team_skill_info</custom-field>
+	   <custom-field action="translate">skill_name</custom-field>
+	   <custom-field action="translate">skill_value</custom-field>
+		<custom-field action="translate">rt_team_qualification_title</custom-field>
+		<custom-field action="translate">qualification_name</custom-field>
        <custom-field action="translate">rt_team_contact_form</custom-field>
        <custom-field action="translate">rt_project_title</custom-field>
        <custom-field action="translate">rt_project_text</custom-field>
+		<custom-field action="translate">rt_project_subtitle</custom-field>
        <custom-field action="translate">rt_project_client</custom-field>
        <custom-field action="translate">rt_project_start</custom-field>
        <custom-field action="translate">rt_project_end</custom-field>
        <custom-field action="translate">rt_project_weblink</custom-field>
-   </custom-fields>
+   	</custom-fields>
 </wpml-config>

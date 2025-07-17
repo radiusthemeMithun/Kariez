@@ -28,7 +28,7 @@
 					font-size: 14px;
 					@include transition_default();
 					&:hover {
-						background-color: #0b0b0b;
+						background-color: $title_color;
 						color: $white_color;
 					}
 				}
@@ -82,9 +82,9 @@
 		.apply-item {
 			border-bottom: 1px solid #D9D9D9;
 			padding: 40px 40px 20px;
-			@include transition_default();
+			transition: all .4s ease;
 			&:hover {
-				box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+				background-color: #F9F8F8;
 			}
 			&:last-child {
 				border-bottom: 0;

@@ -2,7 +2,7 @@
 $columns: 12;
 $gutter: 24px;
 $spacing: 20;
-$container_width: var(--rt-container-width, 1296px);
+$container_width: var(--rt-container-width, 1320px);
 
 //Spacing
 $paddings: ('pt': 'padding-top', 'pr': 'padding-right', 'pb': 'padding-bottom', 'pl': 'padding-left');
@@ -70,7 +70,7 @@ $colors: (
 //Typography
 
 $base_font: var(--rt-body-font, 'DM Sans'), sans-serif;
-$heading_font: var(--rt-heading-font, 'Kumbh Sans'), sans-serif;
+$heading_font: var(--rt-heading-font, 'Outfit'), sans-serif;
 $menu_font: var(--rt-menu-font, 'DM Sans'), sans-serif;
 
 $base_fs: 16px;

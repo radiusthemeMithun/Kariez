@@ -53,7 +53,6 @@ class Project extends Customizer {
 				'choices'     => [
 					'default' => __( 'Project 01', 'kariez' ),
 					'2'    => __( 'Project 02', 'kariez' ),
-					'3'    => __( 'Project 03', 'kariez' ),
 				]
 			],
 
@@ -80,11 +79,6 @@ class Project extends Customizer {
 				'default' => 1
 			],
 
-			'rt_project_subtitle' => [
-				'type'    => 'switch',
-				'label'   => __( 'Subtitle Visibility', 'kariez' ),
-				'default' => 1
-			],
 
 			'rt_project_ar_button' => [
 				'type'    => 'switch',

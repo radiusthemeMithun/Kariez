@@ -1,0 +1,42 @@
+
+.cursor {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10000;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s, visibility .3s;
+
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translate(-50%, -80%) scale(.7);
+		width: 60px;
+		height: 60px;
+		border: 1px solid $primary_color;
+		background-color: $primary_color;
+		border-radius: 50%;
+		font-size: 20px;
+		font-weight: 300;
+		transition: transform .3s;
+		color: $title_color;
+
+		.visible & {
+			transform: translate(-50%, -80%) scale(1.2);
+		}
+	}
+}
+
+.swiper-slide a {
+	position: relative;
+	z-index: 1;
+	pointer-events: auto;
+}

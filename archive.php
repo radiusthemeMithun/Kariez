@@ -13,6 +13,19 @@ use RT\Kariez\Modules\Pagination;
 get_header();
 $content_columns = Fns::content_columns();
 
+if ( is_post_type_archive( "rt-team" ) || is_tax( "rt-team-category" ) ) {
+	get_template_part( 'archive-rt', 'team' );
+	return;
+}
+if ( is_post_type_archive( "rt-service" ) || is_tax( "rt-service-category" ) ) {
+	get_template_part( 'archive-rt', 'service' );
+	return;
+}
+if ( is_post_type_archive( "rt-project" ) || is_tax( "rt-project-category" ) ) {
+	get_template_part( 'archive-rt', 'project' );
+	return;
+}
+
 ?>
 	<div id="primary" class="content-area">
 		<div class="container">

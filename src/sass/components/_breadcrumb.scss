@@ -1,10 +1,12 @@
 .kariez-breadcrumb-wrapper {
 	display: flex;
 	align-items: center;
-	//padding: 320px 0 150px;
 	border-bottom: 1px solid rgba($black_color, 0.1);
-	@media(max-width: 767px) {
-		padding: 80px 0;
+	@media(max-width: 1024px) {
+		padding: 200px 0 100px;
+	}
+	@media(max-width: 991px) {
+		padding: 100px 0;
 	}
 	&.has-bg {
 		position: relative;
@@ -21,7 +23,7 @@
 			top: 0;
 			left: 0;
 			right: 0;
-			//z-index: -1;
+			z-index: -1;
 		}
 		.entry-title {
 			color: $white_color;
@@ -97,10 +99,11 @@
 	}
 	.entry-breadcrumb {
 		span {
-			font-size: 24px;
-			font-weight: 700;
+			font-size: 18px;
+			font-weight: 400;
 			a {
 				color: $white_color;
+				font-weight: 400;
 				&:hover {
 					color: $primary_color;
 				}
@@ -108,8 +111,8 @@
 
 		}
 		.current-item {
-			color: #DFDCDC;
-			font-weight: 400;
+			color: $white_color;
+			font-weight: 700;
 		}
 		.dvdr {
 			padding: 0 10px;
@@ -117,7 +120,7 @@
 			&:after {
 				content: "";
 				height: 100%;
-				width: 3px;
+				width: 1.5px;
 				background-color: #FFFFFF;
 				position: absolute;
 				top: 0;
@@ -128,17 +131,17 @@
 	}
 	.entry-title {
 		color: $title_color;
-		font-size: clamp(44px, 4vw, 55px);
+		font-size: 40px;
 		font-weight: 500;
 		line-height: 1.2;
-		margin-bottom: 15px;
-		text-transform: uppercase;
+		margin-bottom: 10px;
+		text-transform: capitalize;
 	}
-	//.align-items-center {
-	//	.entry-breadcrumb {
-	//		text-align: center;
-	//	}
-	//}
+	.align-items-center {
+		.entry-breadcrumb {
+			text-align: center;
+		}
+	}
 	.align-items-end {
 		.entry-breadcrumb {
 			text-align: right;
@@ -149,7 +152,13 @@
 
 .has-trheader {
 	.kariez-breadcrumb-wrapper {
-		padding-top: 340px;
+		padding-top: 260px;
+		@media(max-width: 1024px) {
+			padding: 200px 0 100px;
+		}
+		@media(max-width: 991px) {
+			padding: 100px 0;
+		}
 		&.has-bg {
 			padding-bottom: 170px;
 		}
@@ -161,12 +170,18 @@
 
 .has-sticky-header {
 	.kariez-breadcrumb-wrapper {
-		padding-top: 250px;
+		padding-top: 260px;
+		@media(max-width: 1024px) {
+			padding: 200px 0 100px;
+		}
+		@media(max-width: 991px) {
+			padding: 100px 0;
+		}
 		&.has-bg {
-			padding-bottom: 120px;
+			padding-bottom: 150px;
 		}
 		&.has-color {
-			padding-bottom: 120px;
+			padding-bottom: 150px;
 		}
 		@media(max-width: 767px) {
 			&.has-bg {
@@ -180,15 +195,19 @@
 }
 .has-sticky-header.has-top-bar {
 	.kariez-breadcrumb-wrapper {
-		padding-top: 250px;
-		@media(max-width: 480px) {
-			padding-top: 345px;
+		padding-top: 260px;
+		@media(max-width: 1024px) {
+			padding: 200px 0 100px;
+		}
+		@media(max-width: 991px) {
+			padding: 100px 0;
 		}
 	}
 }
 
 .kariez-breadcrumb-wrapper,
 .has-trheader .kariez-breadcrumb-wrapper {
+	text-align: center;
 	.breadcrumb {
 		a {
 			color: $white_color;

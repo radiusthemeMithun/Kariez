@@ -15,7 +15,7 @@ $_fullwidth = Opt::$header_width == 'full' ? '-fluid' : '';
 ?>
 
 <div class="main-header-section">
-	<div class="header-container <?php echo esc_attr($_fullwidth) ?>">
+	<div class="header-container rt-container <?php echo esc_attr($_fullwidth) ?>">
 		<div class="row navigation-menu-wrap align-middle m-0">
 			<div class="site-branding">
 				<?php echo kariez_site_logo( $logo_h1 ); ?>

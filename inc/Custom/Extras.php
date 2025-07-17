@@ -87,6 +87,10 @@ class Extras {
 			$classes[] = 'rt-blend';
 		}
 
+//		if ( kariez_option( 'rt_page' ) ) {
+//			$classes[] = 'page';
+//		}
+
 		if ( kariez_option( 'rt_remove_admin_bar' ) ) {
 			$classes[] = 'remove-admin-bar';
 		}

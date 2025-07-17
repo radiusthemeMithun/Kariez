@@ -25,12 +25,6 @@ if ( kariez_option( 'rt_project_style' ) == 'default' ){
 	$project_archive_layout 		= "rt-project-default rt-project-multi-layout-default";
 } elseif ( kariez_option( 'rt_project_style' ) == '2' ){
 	$project_archive_layout 		= "rt-project-default rt-project-multi-layout-2";
-} elseif ( kariez_option( 'rt_project_style' ) == '3' ){
-	$project_archive_layout 		= "rt-project-default rt-project-multi-layout-3";
-} elseif ( kariez_option( 'rt_project_style' ) == '4' ){
-	$project_archive_layout 		= "rt-project-default rt-project-multi-layout-4";
-} elseif ( kariez_option( 'rt_project_style' ) == '5' ){
-	$project_archive_layout 		= "rt-project-default rt-project-multi-layout-5";
 } else {
 	$project_archive_layout 		= "rt-project-default rt-project-multi-layout-1";
 }

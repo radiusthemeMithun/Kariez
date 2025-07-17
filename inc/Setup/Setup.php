@@ -39,6 +39,7 @@ class Setup {
 			'kariez-size4'  => [ 450, 450, true ],
 			'kariez-size5'  => [ 600, 682, true ],
 			'kariez-size6'  => [ 960, 960, true ],
+			'kariez-size7'  => [ 450, 600, true ],
 		];
 
 		$sizes = apply_filters( 'kariez_image_size', $sizes );
@@ -67,6 +68,9 @@ class Setup {
 		add_theme_support( 'custom-logo' );
 		add_theme_support( "custom-header" );
 		add_theme_support( "custom-background" );
+		add_theme_support( "register_block_style" );
+		add_theme_support( "register_block_pattern" );
+		add_theme_support( "responsive-embeds" );
 
 		/**
 		 * Add woocommerce support and woocommerce override

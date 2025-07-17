@@ -108,10 +108,9 @@ class ProjectRelated {
 							<article id="post-<?php the_ID(); ?>">
 								<div class="project-item">
 									<div class="project-thumbs">
-										<?php kariez_post_thumbnail('kariez-size6'); ?>
+										<?php kariez_post_thumbnail('kariez-size7'); ?>
 										<div class="project-content">
 											<div class="project-info">
-												<h3 class="project-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $trimmed_title ); ?></a></h3>
 												<?php if ( kariez_option( 'rt_project_ar_cat' ) ) { ?>
 													<span class="project-cat"><?php
 														$i = 1;
@@ -121,14 +120,19 @@ class ProjectRelated {
 																$link = get_term_link( $term_list->term_id, 'rt-project-category' ); ?>
 																<?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>">
 																<?php echo esc_html( $term_list->name ); ?></a><?php $i++; } } ?></span>
-												<?php } if ( kariez_option( 'rt_project_ar_excerpt' ) ) { ?>
+												<?php } ?>
+												<h3 class="project-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $trimmed_title ); ?></a></h3>
+												 <?php if ( kariez_option( 'rt_project_ar_excerpt' ) ) { ?>
 													<div class="project-excerpt"><?php kariez_html( $content , false ); ?></div>
 												<?php } ?>
 											</div>
 											<?php if( kariez_option( 'rt_project_ar_button' ) ) { ?>
 												<div class="rt-button">
-													<a class="btn button-3" href="<?php the_permalink();?>">
-														<?php esc_html_e('See Details' , 'kariez' ); ?>
+													<a class="btn button-4" href="<?php the_permalink();?>">
+														<span class="button-text"><?php esc_html_e('See Details' , 'kariez' ); ?></span>
+														<span class="btn-round-shape">
+															<i class="icon-arrow-right"></i>
+														</span>
 													</a>
 												</div>
 											<?php } ?>

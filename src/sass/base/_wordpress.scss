@@ -211,7 +211,7 @@ form.post-password-form input[type="submit"] {
 		margin-left: 0;
 		border: none;
 		background-color: $primary_color;
-		border-radius: 0;
+		border-radius: 0 5px 5px 0;
 		padding: 6px 20px;
 		font-size: 16px;
 		font-weight: 500;
@@ -224,7 +224,7 @@ form.post-password-form input[type="submit"] {
 	}
 	.wp-block-search__input {
 		border: none;
-		border-radius: 0;
+		border-radius: 5px;
 		height: 60px;
 		padding-left: 15px;
 		padding-right: 15px;
@@ -261,7 +261,10 @@ form.post-password-form input[type="submit"] {
 }
 figcaption,
 figure.wp-block-image figcaption {
-	border-radius: 0;
+	border-radius: 10px;
+	img {
+		border-radius: 10px;
+	}
 }
 :where(.wp-block-cover-image.is-light:not(.has-text-color)),
 :where(.wp-block-cover.is-light:not(.has-text-color)) {
@@ -281,59 +284,47 @@ figure.wp-block-image figcaption {
 	.wp-block-button__link {
 		color: $button_text_color;
 		background-color: $primary_color;
-		text-align: center;
-		display: inline-block;
+		text-align: left;
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		flex-wrap: wrap;
+		flex-direction: row;
 		padding: 16px 30px 15px;
-		transition: all .3s ease-in-out;
 		position: relative;
-		overflow: hidden;
-		z-index: 2;
-		font-weight: 700;
-		text-transform: uppercase;
+		z-index: 1;
+		font-weight: 500;
+		text-transform: capitalize;
 		border: 0;
-		border-radius: 0;
-		font-size: 16px;
-		&:before {
+		border-radius: 5px;
+		font-size: 15px;
+		overflow: hidden;
+		transition: all .4s cubic-bezier(.42,0,.58,1);
+		transition-delay: 0s;
+		&::before {
 			content: "";
+			width: 100%;
+			height: 100%;
+			display: block;
 			position: absolute;
 			top: 0;
+			right: auto;
+			bottom: auto;
 			left: 0;
-			bottom: 0;
-			right: 0;
-			background-color: $white_color;
-			transform: scalex(0.0);
-			transform-origin: center;
-			transform-style: preserve-3d;
-			transition: all 0.3s linear;
-			transform-origin: left center;
-			z-index: -1;
-		}
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			background-color: $button_text_color;
-			transform: scaleY(0.0);
-			transform-origin: center;
-			transform-style: preserve-3d;
-			transition: all 0.3s linear;
-			transform-origin: right center;
+			background-color: $title_color;
+			transform: translate(calc(-100% - 2px));
+			border-radius: 5px;
+			transition: all .6s cubic-bezier(.645,.045,.355,1);
+			transition-delay: 0s;
 			z-index: -1;
 		}
 		&:hover {
-			color: $primary_color;
-			&:after {
-				transform: scaleY(1.0);
-				transform-origin: right center;
-				transition-delay: 100ms;
-			}
-			&:before {
-				transform: scalex(1.0);
-				transform-origin: left center;
-				transition-delay: 100ms;
+			color: $white_color;
+			&::before {
+				transform: translate(0);
+				transition: all .4s cubic-bezier(.42,0,.58,1);
+				transition-delay: 0s;
 			}
 		}
 	}
@@ -346,9 +337,6 @@ figure.wp-block-image figcaption {
 .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	color: $button_color;
 	border-color: $secondary_color;
-}
-.wp-block-button.is-style-outline .wp-block-button__link:after {
-	background-color: $title_color;
 }
 .wp-block-button.is-style-outline .wp-block-button__link:before {
 	//display: none;
@@ -363,11 +351,11 @@ figure.wp-block-image figcaption {
 	border-radius: 0;
 }
 
-.wp-block-button .has-kariez-primary-background-color:before { background-color: #006D5B;}
-.wp-block-button .has-kariez-secondary-background-color:before { background-color: #00473b;}
+.wp-block-button .has-kariez-primary-background-color:before { background-color: #FFCC00;}
+.wp-block-button .has-kariez-secondary-background-color:before { background-color: #FFFCEE;}
 .wp-block-button .has-kariez-yellow-background-color:before { background-color: #ffb000;}
 .wp-block-button .has-kariez-dark-gray-background-color:before { background-color: #edf5f4;}
-.wp-block-button .has-kariez-light-gray-background-color:before { background-color: #f1f1f1;}
+.wp-block-button .has-kariez-light-gray-background-color:before { background-color: #f8f8f8;}
 .wp-block-button .has-kariez-white-background-color:before { background-color: #ffffff;}
 
 // block pull quote

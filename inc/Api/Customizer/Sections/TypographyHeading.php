@@ -46,10 +46,10 @@ class TypographyHeading extends Customizer {
 				'label'   => __( 'All Headings Typography', 'kariez' ),
 				'default' => json_encode(
 					[
-						'font'          => 'Kumbh Sans',
+						'font'          => 'Outfit',
 						'regularweight' => '700',
-						'size'          => '50',
-						'lineheight'    => '60',
+						'size'          => '40',
+						'lineheight'    => '50',
 					]
 				)
 			],

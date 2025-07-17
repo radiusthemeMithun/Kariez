@@ -11,21 +11,6 @@
 	}
 }
 
-.rt-testimonial-slider {
-	&:hover {
-
-		.swiper-button-prev {
-			left: -80px;
-			opacity: 1;
-			visibility: visible;
-		}
-		.swiper-button-next {
-			right: -80px;
-			opacity: 1;
-			visibility: visible;
-		}
-	}
-}
 .swiper-navigation {
 	.swiper-button-prev {
 		left: 12px;
@@ -36,39 +21,22 @@
 	.swiper-button {
 		height: 60px;
 		width: 60px;
-		background-color: transparent;
-		border: 1px solid $white_color;
+		background-color: $primary_color;
+		border: 1px solid $primary_color;
 		border-radius: 100%;
 		z-index: 1;
 		top: 50%;
 		margin-top: 0;
 		transform: translateY(-50%);
 		transition: all .4s ease-out;
-		visibility: hidden;
 		@include transition_default();
-		&::before {
-			content: "";
-			transform: scale(0);
-			background-color: $primary_color;
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			z-index: -1;
-			transition: .4s;
-			border-radius: 100%;
-		}
 		i {
-			color: $white_color;
+			color: $title_color;
 			&:before {
 				margin: 0;
 			}
 		}
 		&:hover {
-			&::before {
-				transform: scale(.95);
-			}
 			i {
 				color: $title_color;
 			}
@@ -76,16 +44,6 @@
 		&:after {
 			display: none;
 		}
-	}
-	.swiper-button-prev {
-		left: -100px;
-		opacity: 0;
-		visibility: hidden;
-	}
-	.swiper-button-next {
-		right: -100px;
-		opacity: 0;
-		visibility: hidden;
 	}
 }
 
@@ -96,18 +54,23 @@
 	justify-content: center;
 	bottom: 0 !important;
 	z-index: 1;
+	align-items: center;
 	.swiper-pagination-bullet {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		transition: all 0.21s ease-in-out;
-		background: $white_color;
-		opacity: 1;
+		position: relative;
+		height: 8px;
+		width: 8px;
+		border-radius: 100%;
+		//background-color: rgba(255, 255, 255, .4);
+		text-align: left;
+		font-size: 0;
+		background-color: $title_color;
+		margin: 0 6px !important;
 	}
 	.swiper-pagination-bullet-active {
-		width: 30px;
-		border-radius: 30px;
-		background: $primary_color;
+		//background-color: $white_color;
+		background-color: $primary_color;
+		height: 12px;
+		width: 12px;
 	}
 }
 @media(max-width: 767px) {

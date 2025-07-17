@@ -15,19 +15,19 @@ class PostShare {
 			],
 			'twitter'   => [
 				'url'  => "https://twitter.com/intent/tweet?source=$url&text=$title:$url",
-				'icon' => 'icon-twitter'
+				'icon' => 'icon-twitter-sm'
 			],
 			'linkedin'  => [
 				'url'  => "http://www.linkedin.com/shareArticle?mini=true&url=$url&title=$title",
-				'icon' => 'icon-linked'
+				'icon' => 'icon-linkdin'
 			],
 			'pinterest' => [
 				'url'  => "http://pinterest.com/pin/create/button/?url=$url&description=$title",
-				'icon' => 'icon-pintarest-1'
+				'icon' => 'icon-pinterest'
 			],
 			'whatsapp' => [
 				'url'   => 'https://api.whatsapp.com/send?text='. $title . ' – ' . $url ,
-				'icon' => 'icon-instragram'
+				'icon' => 'icon-whatsapp'
 			],
 			'youtube' => [
 				'url'  => "https://www.youtube.com?text='. $title .'&amp;url='. $url",

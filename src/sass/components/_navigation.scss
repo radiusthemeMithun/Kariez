@@ -1,5 +1,4 @@
 
-
 /* Main Navigation
 ***************************/
 .navigation-menu-wrap {
@@ -11,11 +10,11 @@
 		padding-bottom: 12px;
 	}
 	@media(max-width: 575px) {
-		justify-content: center;
+		justify-content: space-between;
 		gap: 12px;
 		.menu-icon-wrapper {
-			margin-left: unset;
-			padding-left: 0;
+			//margin-left: unset;
+			//padding-left: 0;
 			> ul {
 				justify-content: center;
 			}
@@ -42,7 +41,7 @@
 		position: relative;
 		margin-bottom: 0;
 		&:not(:last-child) {
-			margin-right: 60px;
+			margin-right: 40px;
 		}
 	}
 
@@ -55,80 +54,73 @@
 
 	ul li a {
 		font-size: 16px;
-		font-weight: 700;
 		line-height: 22px;
 		color: $title_color;
 		text-decoration: none;
-		font-family: $heading_font;
-		padding: 35px 0;
+		padding: 36px 0;
 		position: relative;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		gap: 5px;
-		text-transform: uppercase;
-
-
+		text-transform: capitalize;
 		@media (max-width: 1199px) {
 			padding: 26px 15px;
 		}
 	}
+
 	ul li ul li > a:after {
 		content: "";
-		display: block;
-		position: absolute;
+		height: 1px;
 		width: 100%;
-		height: 0%;
-		top: auto;
-		left: 0%;
-		bottom: 0%;
-		background-color: $primary_color;
-		z-index: -1;
-		opacity: 0;
-		visibility: hidden;
-		transition: all .3s ease-in-out;
+		background-color: $title_color;
+		bottom: 2px;
+		position: absolute;
+		transform: scale3d(0, 1, 1);
+		transform-origin: 100% 50%;
+		transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+		pointer-events: none;
+		left: 0;
 	}
 
 	ul li ul li:hover > a:after {
-		height: 100%;
-		top: 0%;
-		bottom: auto;
-		visibility: visible;
-		opacity: 1;
+		transform: scale3d(1, 1, 1);
+		transform-origin: 0% 50%;
+		transition-timing-function: ease;
 	}
 
 	ul li ul li:hover > a svg {
-		fill: $title_color;
+		color: $title_color;
 	}
 
 	ul li.current-menu-item > a svg,
 	ul li.current-menu-ancestor > a svg {
-		fill: $primary_color;
+		color: $title_color;
 	}
 
 	ul li.current-menu-item > a,
 	ul li.current-menu-ancestor > a {
-		@extend .primaryColor;
+		color: $title_color;
 	}
 
 	ul li a:hover {
 		@extend .primaryColor;
 		svg {
-			fill: $primary_color;
+			color: $title_color;
 		}
 	}
 
-	//ul.menu > li > a:hover {
-	//	@extend .primaryColor;
-	//	svg {
-	//		fill: $title_color;
-	//	}
-	//}
+	ul.menu > li > a:hover {
+		@extend .primaryColor;
+		svg {
+			color: $title_color;
+		}
+	}
 
-	//ul.menu li.current-menu-item > a,
-	//ul.menu li.current > a {
-	//	@extend .primaryColor;
-	//}
+	ul.menu li.current-menu-item > a,
+	ul.menu li.current > a {
+		color: $title_color;
+	}
 
 	/* #. Submenu */
 	ul > li > ul {
@@ -136,7 +128,7 @@
 		position: absolute;
 		top: 100%;
 		background-color: #ffffff;
-		width: 260px;
+		width: 215px;
 		list-style: none;
 		margin: 0;
 		box-shadow: 0 13px 48px 0 rgb(0 0 0 / 15%);
@@ -145,7 +137,9 @@
 		z-index: 9;
 		transform-origin: top center;
 		transform: scaleY(0) translateZ(100px);
-		transition: opacity 500ms ease, visibility 500ms ease, transform 700ms ease;
+		transition: opacity 200ms ease, visibility 200ms ease, transform 500ms ease;
+		padding-left: 0;
+		border-radius: 5px;
 	}
 
 	ul > li:hover > ul {
@@ -160,27 +154,37 @@
 		width: $dropdown_width;
 	}
 	ul li ul li {
-		padding: 0 13px;
 		display: block;
+		padding: 0 35px;
+		// &:last-child {
+		// 	a {
+		// 		margin-bottom: 0;
+		// 	}
+		// }
 	}
 
 	ul li ul li a {
 		position: relative;
-		display: block;
-		color: $title_color;
-		padding: 10px 17px;
+		display: inline-block;
+		color: $body_color;
+		padding: 0;
 		z-index: 2;
 		font-size: 15px;
+		font-weight: 500 !important;
+		margin-bottom: 10px;
+		transition: all 0.21s cubic-bezier(.3,.02,0,.6);
 	}
 
 	ul li ul > li:last-child {
 		> a {
 			border-bottom: none;
+			margin-bottom: 0;
 		}
 	}
 
 	ul li ul li:hover > a {
 		color: $title_color;
+		margin-left: 15px;
 	}
 
 	/*Menu hover effect*/
@@ -214,9 +218,9 @@
 	> ul li.page_item_has_children > a:after,
 	> ul li.menu-item-has-children > a:after {
 		content: "";
-		width: 7px;
-		height: 7px;
-		border: 1px solid $primary_color;
+		width: 10px;
+		height: 10px;
+		border: 1px solid $title_color;
 		display: inline-block;
 		transform: rotate(45deg) translate(1px, -4px);
 		border-left: none;
@@ -226,14 +230,15 @@
 	}
 
 	.caret svg {
-		fill: unset;
-		transition: fill 0.4s;
+		position: relative;
+		top: -1px;
+		@include transition_default();
 	}
 
 	.dropdown-menu .caret {
 		position: absolute;
 		top: 50%;
-		right: 15px;
+		right: -15px;
 		transform: translateY(-50%);
 	}
 

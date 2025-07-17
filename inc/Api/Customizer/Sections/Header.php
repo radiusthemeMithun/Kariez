@@ -146,22 +146,29 @@ class Header extends Customizer {
 				'label'   => __( 'Offcanvas Social', 'kariez' ),
 				'default' => 0,
 			],
-
+			'rt_header_phone' => [
+				'type'    => 'switch',
+				'label'   => __( 'Phone ?', 'kariez' ),
+				'default' => 0
+			],
 			'rt_header_sep2' => [
 				'type' => 'separator',
 			],
 
-			'rt_track_order_button' => [
+			'rt_get_started_button' => [
 				'type'    => 'switch',
-				'label'   => __( 'Track Ordered Button ?', 'kariez' ),
+				'label'   => __( 'Get Started Button ?', 'kariez' ),
 				'default' => 0
 			],
 
-			'rt_track_order_button_url' => [
+
+
+			'rt_get_started_button_url' => [
 				'type'    => 'text',
 				'label'   => __( 'Button Link', 'kariez' ),
-				'condition' => [ 'rt_track_order_button' ],
+				'condition' => [ 'rt_get_started_button' ],
 			],
+
 
 		] );
 
