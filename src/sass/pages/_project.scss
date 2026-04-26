@@ -143,7 +143,7 @@
 					&:after {
 						height: 50%;
 						width: 100%;
-						background-color: #000;
+						background-color: rgba(0, 0, 0, .6);
 						filter: blur(100px);
 						content: "";
 						position: absolute;
@@ -227,7 +227,7 @@
 				text-transform: uppercase;
 				transition: all 1s ease-in-out;
 				letter-spacing: 4.5px;
-				display: inline-block;
+				display: block;
 				background-color: transparent;
 				padding: 0;
 				a {
@@ -291,7 +291,6 @@
 		}
 	}
 }
-
 
 
 // Project Single

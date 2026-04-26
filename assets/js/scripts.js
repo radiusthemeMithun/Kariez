@@ -40,9 +40,8 @@
 			Kariez.mousemove_team_hover_effect();
 			Kariez.CustomCursor();
 			Kariez.ServiceActive();
-			Kariez.MultiScroll()
+			Kariez.MultiScroll();
         },
-
 
 		MultiScroll: function () {
 			if ($.fn.multiscroll !== undefined) {
@@ -170,10 +169,6 @@
 		elementorFrontend.hooks.addAction('frontend/element_ready/rt_creative-service.default', service_active);
 	});
 },
-
-
-
-
 
 		rtElementorParallax: function () {
 			if ($(".rt-parallax-bg-yes").length) {

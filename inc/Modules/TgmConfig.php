@@ -31,14 +31,14 @@ class TgmConfig {
 				'slug'     => 'kariez-core',
 				'source'   => 'kariez-core.zip',
 				'required' => true,
-				'version'  => '1.1.0'
+				'version'  => '1.1.3'
 			],
 			[
 				'name'     => 'RT Framework',
 				'slug'     => 'rt-framework',
 				'source'   => 'rt-framework.zip',
 				'required' => true,
-				'version'  => '3.0.3'
+				'version'  => '3.0.4'
 			],
 
 			// Repository

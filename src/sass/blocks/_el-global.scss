@@ -40,6 +40,8 @@
 
 .rt-support-wrap {
 	.elementor-icon-box-wrapper {
+		display: flex;
+		gap: 20px;
 		.elementor-icon-box-icon {
 			.elementor-icon {
 				height: 50px;
@@ -87,6 +89,11 @@
 						margin: 0;
 					}
 				}
+			}
+		}
+		.elementor-icon-box-title {
+			a {
+				color: $white_color;
 			}
 		}
 	}
@@ -250,5 +257,15 @@
 	}
 }
 
+.rt-video-wrap {
+	.icon-style3 {
+		background-attachment: unset;
+	}
+}
 
+.rt-header-nine {
+	.menu-main-menu-container > ul > li.mega-menu > ul {
+		top: 76%;
+	}
+}
 
